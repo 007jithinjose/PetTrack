@@ -1,10 +1,44 @@
+//File: src/models/User.model.ts
 import { Schema, model } from 'mongoose';
 import bcrypt from 'bcryptjs';
 import { IUser, IPetOwner, IDoctor, IUserMethods, UserModel } from '../interfaces';
 
 /**
- * Base User Schema
- * @description Mongoose schema for the base User model
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       properties:
+ *         _id:
+ *           type: string
+ *           example: 507f1f77bcf86cd799439011
+ *         email:
+ *           type: string
+ *           format: email
+ *           example: user@example.com
+ *         role:
+ *           type: string
+ *           enum: [doctor, petOwner]
+ *         createdAt:
+ *           type: string
+ *           format: date-time
+ *         updatedAt:
+ *           type: string
+ *           format: date-time
+ *       required:
+ *         - email
+ *         - role
+ * 
+ *     AuthResponse:
+ *       type: object
+ *       properties:
+ *         user:
+ *           $ref: '#/components/schemas/User'
+ *         token:
+ *           type: string
+ *           description: JWT access token
+ *           example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
  */
 const userSchema = new Schema<IUser, UserModel, IUserMethods>(
   {
@@ -19,7 +53,7 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
     password: {
       type: String,
       required: true,
-      select: false // Never return password in queries
+      select: false
     },
     role: {
       type: String,
@@ -33,7 +67,7 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
     toJSON: {
       virtuals: true,
       transform: function (doc, ret) {
-        delete ret.password; // Ensure password is never sent in JSON responses
+        delete ret.password;
         delete ret.__v;
         return ret;
       }
@@ -44,10 +78,6 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
   }
 );
 
-/**
- * Pre-save hook for password hashing
- * @description Hashes the password before saving to the database
- */
 userSchema.pre<IUser>('save', async function (next) {
   if (!this.isModified('password')) return next();
 
@@ -60,24 +90,61 @@ userSchema.pre<IUser>('save', async function (next) {
   }
 });
 
-/**
- * Password comparison method
- * @description Compares a candidate password with the user's hashed password
- * @param candidatePassword - The password to compare
- * @returns Promise<boolean> - True if passwords match, false otherwise
- */
 userSchema.methods.comparePassword = async function (
   candidatePassword: string
 ): Promise<boolean> {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-// Create the base User model
 const User = model<IUser, UserModel>('User', userSchema);
 
 /**
- * PetOwner Schema
- * @description Mongoose schema for PetOwner discriminator
+ * @swagger
+ * components:
+ *   schemas:
+ *     PetOwner:
+ *       allOf:
+ *         - $ref: '#/components/schemas/User'
+ *         - type: object
+ *           properties:
+ *             firstName:
+ *               type: string
+ *               example: John
+ *             lastName:
+ *               type: string
+ *               example: Doe
+ *             phone:
+ *               type: string
+ *               example: "+1234567890"
+ *             address:
+ *               type: object
+ *               properties:
+ *                 street:
+ *                   type: string
+ *                   example: "123 Main St"
+ *                 city:
+ *                   type: string
+ *                   example: "New York"
+ *                 state:
+ *                   type: string
+ *                   example: "NY"
+ *                 zipCode:
+ *                   type: string
+ *                   example: "10001"
+ *                 country:
+ *                   type: string
+ *                   example: "USA"
+ *             pets:
+ *               type: array
+ *               items:
+ *                 type: string
+ *                 format: objectId
+ *               example: ["507f1f77bcf86cd799439012"]
+ *           required:
+ *             - firstName
+ *             - lastName
+ *             - phone
+ *             - address
  */
 const petOwnerSchema = new Schema<IPetOwner>({
   firstName: {
@@ -109,8 +176,50 @@ const petOwnerSchema = new Schema<IPetOwner>({
 });
 
 /**
- * Doctor Schema
- * @description Mongoose schema for Doctor discriminator
+ * @swagger
+ * components:
+ *   schemas:
+ *     Doctor:
+ *       allOf:
+ *         - $ref: '#/components/schemas/User'
+ *         - type: object
+ *           properties:
+ *             name:
+ *               type: string
+ *               example: "Dr. Smith"
+ *             specialization:
+ *               type: string
+ *               example: "Veterinary Surgery"
+ *             hospital:
+ *               type: string
+ *               format: objectId
+ *               example: "507f1f77bcf86cd799439013"
+ *             contactNumber:
+ *               type: string
+ *               example: "+1234567890"
+ *             availability:
+ *               type: object
+ *               properties:
+ *                 days:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *                     enum: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+ *                 hours:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *                     pattern: "^([01]?[0-9]|2[0-3]):[0-5][0-9]$"
+ *             appointments:
+ *               type: array
+ *               items:
+ *                 type: string
+ *                 format: objectId
+ *           required:
+ *             - name
+ *             - specialization
+ *             - hospital
+ *             - contactNumber
  */
 const doctorSchema = new Schema<IDoctor>({
   name: {
@@ -140,7 +249,7 @@ const doctorSchema = new Schema<IDoctor>({
     }],
     hours: [{
       type: String,
-      match: /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/ // HH:MM format
+      match: /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/
     }]
   },
   appointments: [{
@@ -149,7 +258,6 @@ const doctorSchema = new Schema<IDoctor>({
   }]
 });
 
-// Create discriminator models
 export const PetOwner = User.discriminator<IPetOwner>('petOwner', petOwnerSchema);
 export const Doctor = User.discriminator<IDoctor>('doctor', doctorSchema);
 

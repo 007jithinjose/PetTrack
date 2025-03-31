@@ -1,4 +1,4 @@
-//File: src/app.ts
+// File: src/app.ts
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -8,6 +8,8 @@ import { connectDB } from './config/db';
 import { errorHandler } from './middlewares/errorHandler';
 import routes from './routes';
 import { rateLimiter } from './middlewares/rateLimiter';
+import logger from './utils/logger';
+import mongoose from 'mongoose';
 
 const app = express();
 
@@ -32,14 +34,22 @@ if (process.env.NODE_ENV === 'development') {
 app.use('/api', rateLimiter);
 
 // Database connection
-connectDB();
+connectDB().catch(err => {
+  logger.error('Failed to connect to DB:', err);
+  process.exit(1);
+});
 
 // Routes
 app.use('/api/v1', routes);
 
-// Health check
+// Health check with DB status
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'healthy' });
+  const dbStatus = mongoose.connection.readyState;
+  const status = dbStatus === 1 ? 'healthy' : 'unhealthy';
+  res.status(dbStatus === 1 ? 200 : 503).json({ 
+    status,
+    database: dbStatus === 1 ? 'connected' : 'disconnected'
+  });
 });
 
 // Error handling
