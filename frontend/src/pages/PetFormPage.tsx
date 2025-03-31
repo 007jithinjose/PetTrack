@@ -1,8 +1,8 @@
-// src/pages/PetManagement.tsx
+// src/pages/PetFormPage.tsx
 import { MainNav } from '@/components/layout/MainNav';
-import { PetList } from '@/components/pets/PetList';
+import { PetForm } from '@/components/pets/PetForm';
 
-export function PetManagement() {
+export function PetFormPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b">
@@ -10,8 +10,8 @@ export function PetManagement() {
       </header>
       
       <main className="flex-1 p-4">
-        <div className="container mx-auto">
-          <PetList />
+        <div className="container mx-auto max-w-md">
+          <PetForm />
         </div>
       </main>
     </div>

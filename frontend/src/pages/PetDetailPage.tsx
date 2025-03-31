@@ -1,8 +1,8 @@
-// src/pages/PetManagement.tsx
+// src/pages/PetDetailPage.tsx
 import { MainNav } from '@/components/layout/MainNav';
-import { PetList } from '@/components/pets/PetList';
+import { PetDetail } from '@/components/pets/PetDetail';
 
-export function PetManagement() {
+export function PetDetailPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b">
@@ -11,7 +11,7 @@ export function PetManagement() {
       
       <main className="flex-1 p-4">
         <div className="container mx-auto">
-          <PetList />
+          <PetDetail />
         </div>
       </main>
     </div>
