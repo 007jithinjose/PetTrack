@@ -1,11 +1,12 @@
 // File: src/controllers/auth.controller.ts
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
-import { User, PetOwner, Doctor } from '../models';
+import { User, PetOwner, Doctor, Hospital } from '../models';
 import { generateToken } from '../utils/jwt';
 import { catchAsync } from '../utils/catchAsync';
 import { ApiError } from '../errors/ApiError';
 import { IUser, IPetOwner, IDoctor } from '../interfaces';
+import { Types } from 'mongoose';
 
 export const authController = {
   registerPetOwner: catchAsync(async (req: Request, res: Response) => {
@@ -31,10 +32,23 @@ export const authController = {
   registerDoctor: catchAsync(async (req: Request, res: Response) => {
     const { email, password, name, specialization, hospital, contactNumber } = req.body;
     
+    // Validate email
     if (await User.findOne({ email })) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Email already exists');
     }
 
+    // Validate hospital ID format
+    if (!Types.ObjectId.isValid(hospital)) {
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid hospital ID');
+    }
+
+    // Check hospital exists
+    const hospitalExists = await Hospital.findById(hospital);
+    if (!hospitalExists) {
+      throw new ApiError(httpStatus.NOT_FOUND, 'Hospital not found');
+    }
+
+    // Create doctor
     const doctor = await Doctor.create({ 
       email, 
       password, 
@@ -44,6 +58,13 @@ export const authController = {
       hospital,
       contactNumber
     });
+
+    // Add doctor to hospital's doctors array
+    await Hospital.findByIdAndUpdate(
+      hospital,
+      { $addToSet: { doctors: doctor._id } },
+      { new: true, runValidators: true }
+    );
 
     sendAuthResponse(res, doctor as unknown as IDoctor & Document);
   }),

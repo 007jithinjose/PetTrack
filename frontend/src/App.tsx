@@ -10,54 +10,45 @@ import { PetManagement } from './pages/PetManagement';
 import { PetDetailPage } from './pages/PetDetailPage';
 import { PetFormPage } from './pages/PetFormPage';
 import { EditPetPage } from './pages/EditPetPage';
+import { AppointmentBooking } from './pages/AppointmentBooking';
+import { DashboardLayout } from '@/components/layout/DashboardLayout';
+import { DoctorAppointmentsPage } from './pages/DoctorAppointmentsPage';
 
+// src/App.tsx
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          {/* Public routes */}
           <Route path="/" element={<LandingPage />} />
           <Route path="/auth/*" element={<AuthPage />} />
           
-          <Route path="/owner" element={
-            <AuthWrapper requiredRole="petowner">
-              <PetOwnerDashboard />
-            </AuthWrapper>
-          } />
+          {/* Protected routes with dashboard layout */}
+          <Route element={<AuthWrapper><DashboardLayout /></AuthWrapper>}>
+            {/* Pet Owner routes */}
+            <Route path="/owner" element={<PetOwnerDashboard />} />
+            
+            {/* Doctor routes */}
+            <Route path="/doctor" element={<DoctorDashboard />} />
+            <Route path="/doctor/appointments" element={<DoctorAppointmentsPage />} />
+            
+            {/* Pet management routes */}
+            <Route path="/pets" element={<PetManagement />} />
+            <Route path="/pets/new" element={<PetFormPage />} />
+            <Route path="/pets/:id" element={<PetDetailPage />} />
+            <Route path="/pets/:id/edit" element={<EditPetPage />} />
+            
+            {/* Appointment routes */}
+            <Route path="/appointments" element={<AppointmentBooking />} />
+            <Route path="/appointments/new" element={<AppointmentBooking />} />
+          </Route>
           
-          <Route path="/doctor" element={
-            <AuthWrapper requiredRole="doctor">
-              <DoctorDashboard />
-            </AuthWrapper>
-          } />
-          
-          {/* Pet routes */}
-          <Route path="/pets" element={
-            <AuthWrapper requiredRole="petowner">
-              <PetManagement />
-            </AuthWrapper>
-          } />
-          
-          <Route path="/pets/new" element={
-            <AuthWrapper requiredRole="petowner">
-              <PetFormPage />
-            </AuthWrapper>
-          } />
-          
-          <Route path="/pets/:id" element={
-            <AuthWrapper requiredRole="petowner">
-              <PetDetailPage />
-            </AuthWrapper>
-          } />
-          
-          <Route path="/pets/:id/edit" element={
-            <AuthWrapper requiredRole="petowner">
-              <EditPetPage />
-            </AuthWrapper>
-          } />
+          {/* 404 Not Found */}
+          <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </BrowserRouter>
-      <Toaster position="top-center" />
+      <Toaster position="top-right" />
     </>
   );
 }

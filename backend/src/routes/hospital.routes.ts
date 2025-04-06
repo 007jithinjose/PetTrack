@@ -2,6 +2,7 @@
 import express from 'express';
 import { validate } from '../middlewares/validate';
 import { hospitalValidation } from '../validations/hospital.validation';
+import { validateObjectId } from '../middlewares/validateObjectId';
 import {
   createHospital,
   getHospitals,
@@ -25,6 +26,73 @@ const router = express.Router();
 
 /**
  * @swagger
+ * components:
+ *   schemas:
+ *     Hospital:
+ *       type: object
+ *       required:
+ *         - name
+ *         - address
+ *         - contactNumber
+ *       properties:
+ *         _id:
+ *           type: string
+ *           description: The auto-generated ID of the hospital
+ *           example: 507f1f77bcf86cd799439011
+ *         name:
+ *           type: string
+ *           description: The name of the hospital
+ *           example: City Veterinary Hospital
+ *         address:
+ *           type: object
+ *           properties:
+ *             street:
+ *               type: string
+ *             city:
+ *               type: string
+ *             state:
+ *               type: string
+ *             zipCode:
+ *               type: string
+ *             country:
+ *               type: string
+ *         contactNumber:
+ *           type: string
+ *           description: The contact number of the hospital
+ *           example: 617-555-1234
+ *         email:
+ *           type: string
+ *           format: email
+ *         services:
+ *           type: array
+ *           items:
+ *             type: string
+ *         doctors:
+ *           type: array
+ *           items:
+ *             type: string
+ *             description: References to Doctor documents
+ *         createdAt:
+ *           type: string
+ *           format: date-time
+ *         updatedAt:
+ *           type: string
+ *           format: date-time
+ *     HospitalForRegistration:
+ *       type: object
+ *       properties:
+ *         _id:
+ *           type: string
+ *           description: The hospital ID
+ *           example: 507f1f77bcf86cd799439011
+ *         name:
+ *           type: string
+ *           description: The hospital name
+ *           example: City Veterinary Hospital
+ */
+
+/**
+ * @swagger
  * /hospitals:
  *   post:
  *     summary: Create a new hospital
@@ -34,9 +102,7 @@ const router = express.Router();
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/HospitalInput'
- *           example:
- *             $ref: '#/components/examples/HospitalRequest'
+ *             $ref: '#/components/schemas/Hospital'
  *     responses:
  *       201:
  *         description: Hospital created successfully
@@ -44,14 +110,8 @@ const router = express.Router();
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Hospital'
- *             example:
- *               $ref: '#/components/examples/HospitalResponse'
  *       400:
  *         description: Validation error
- *         content:
- *           application/json:
- *             example:
- *               $ref: '#/components/examples/HospitalError'
  *   get:
  *     summary: Get all hospitals with pagination
  *     tags: [Hospitals]
@@ -61,7 +121,7 @@ const router = express.Router();
  *         schema:
  *           type: integer
  *           default: 10
- *         description: Limit number of hospitals per page
+ *         description: Limit number of hospitals
  *       - in: query
  *         name: page
  *         schema:
@@ -76,31 +136,14 @@ const router = express.Router();
  *             schema:
  *               type: object
  *               properties:
+ *                 status:
+ *                   type: string
  *                 results:
  *                   type: integer
- *                   description: Number of results on the current page.
- *                 page:
- *                   type: integer
- *                   description: Current page number.
  *                 data:
  *                   type: array
  *                   items:
  *                     $ref: '#/components/schemas/Hospital'
- *             example:
- *               results: 2
- *               page: 1
- *               data:
- *                 - $ref: '#/components/examples/HospitalResponse'
- *                 - name: "Another Hospital"
- *                   address:
- *                     street: "789 Health St"
- *                     city: "Boston"
- *                     state: "MA"
- *                     zipCode: "02115"
- *                     country: "USA"
- *                   contactNumber: "617-555-1234"
- *                   email: "info@anotherhospital.com"
- *                   services: ["Pediatrics", "Surgery"]
  */
 router.route('/')
   .post(validate(hospitalValidation.createHospital), createHospital)
@@ -110,24 +153,22 @@ router.route('/')
  * @swagger
  * /hospitals/list-for-registration:
  *   get:
- *     summary: Get a simplified list of hospitals for doctor registration
+ *     summary: Get simplified hospital list for registration
  *     tags: [Hospitals]
  *     responses:
  *       200:
- *         description: A list of hospital IDs and names
+ *         description: List of hospitals (id and name only)
  *         content:
  *           application/json:
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/HospitalForDoctorRegistration'
- *             example:
- *               - _id: "507f1f77bcf86cd799439011"
- *                 name: "City Veterinary Hospital"
- *               - _id: "507f1f77bcf86cd799439012"
- *                 name: "Metropolitan Animal Hospital"
+ *                 $ref: '#/components/schemas/HospitalForRegistration'
  */
 router.get('/list-for-registration', getHospitalsForRegistration);
+
+// Apply ID validation to all routes below this point
+router.use('/:id', validateObjectId('id'));
 
 /**
  * @swagger
@@ -141,7 +182,7 @@ router.get('/list-for-registration', getHospitalsForRegistration);
  *         required: true
  *         schema:
  *           type: string
- *         description: Hospital ID
+ *           pattern: '^[0-9a-fA-F]{24}$'
  *     responses:
  *       200:
  *         description: Hospital data
@@ -149,18 +190,8 @@ router.get('/list-for-registration', getHospitalsForRegistration);
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Hospital'
- *             example:
- *               $ref: '#/components/examples/HospitalResponse'
  *       404:
  *         description: Hospital not found
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                   example: "Hospital not found"
  *   patch:
  *     summary: Update hospital
  *     tags: [Hospitals]
@@ -170,25 +201,19 @@ router.get('/list-for-registration', getHospitalsForRegistration);
  *         required: true
  *         schema:
  *           type: string
- *         description: Hospital ID
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             $ref: '#/components/schemas/Hospital'
- *           example:
- *             name: "Updated Hospital Name"
- *             services: ["New Service 1", "New Service 2"]
  *     responses:
  *       200:
- *         description: Updated hospital data
+ *         description: Updated hospital
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Hospital'
- *       400:
- *         description: Validation error
  *       404:
  *         description: Hospital not found
  *   delete:
@@ -200,10 +225,9 @@ router.get('/list-for-registration', getHospitalsForRegistration);
  *         required: true
  *         schema:
  *           type: string
- *         description: Hospital ID
  *     responses:
  *       204:
- *         description: Hospital deleted successfully
+ *         description: Hospital deleted
  *       404:
  *         description: Hospital not found
  */
@@ -224,7 +248,6 @@ router.route('/:id')
  *         required: true
  *         schema:
  *           type: string
- *         description: Hospital ID
  *     responses:
  *       200:
  *         description: List of doctors
@@ -234,20 +257,19 @@ router.route('/:id')
  *               type: array
  *               items:
  *                 $ref: '#/components/schemas/DoctorReference'
- *             example:
- *               - _id: "507f1f77bcf86cd799439012"
- *                 name: "Dr. Sarah Johnson"
- *                 email: "s.johnson@hospital.com"
- *                 specialization: "Cardiology"
- *               - _id: "507f1f77bcf86cd799439013"
- *                 name: "Dr. Michael Chen"
- *                 email: "m.chen@hospital.com"
- *                 specialization: "Neurology"
  *       404:
  *         description: Hospital not found
  */
 router.route('/:id/doctors')
   .get(getHospitalDoctors);
+
+// Apply double ID validation for doctor operations
+router.use('/:id/doctors/:doctorId', (req, res, next) => {
+  validateObjectId('id')(req, res, (err) => {
+    if (err) return next(err);
+    validateObjectId('doctorId')(req, res, next);
+  });
+});
 
 /**
  * @swagger
@@ -261,16 +283,14 @@ router.route('/:id/doctors')
  *         required: true
  *         schema:
  *           type: string
- *         description: Hospital ID
  *       - in: path
  *         name: doctorId
  *         required: true
  *         schema:
  *           type: string
- *         description: Doctor ID
  *     responses:
  *       200:
- *         description: Doctor added successfully
+ *         description: Doctor added
  *         content:
  *           application/json:
  *             schema:
@@ -286,16 +306,14 @@ router.route('/:id/doctors')
  *         required: true
  *         schema:
  *           type: string
- *         description: Hospital ID
  *       - in: path
  *         name: doctorId
  *         required: true
  *         schema:
  *           type: string
- *         description: Doctor ID
  *     responses:
  *       200:
- *         description: Doctor removed successfully
+ *         description: Doctor removed
  *         content:
  *           application/json:
  *             schema:

@@ -9,6 +9,7 @@ export interface JwtPayload {
   role: string;
   iat?: number;
   exp?: number;
+  pets?: string[];
 }
 
 export function generateToken(id: string, _id: string, role: string): string {

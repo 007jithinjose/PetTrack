@@ -1,22 +1,11 @@
-//File: src/interfaces/request.interface.ts
-import { Request } from 'express';
-import { IUser } from './user.interface';
+// File: src/interfaces/request.interface.ts
+import { Types } from 'mongoose';
 
-
-export interface AuthRequest extends Request {
-  user?: IUser;
-}
-
-export interface PaginatedRequest extends Request {
-  query: {
-    page?: string;
-    limit?: string;
-    sort?: string;
-    [key: string]: string | undefined;
-  };
-}
-
-export interface FileUploadRequest extends Request {
-  file?: Express.Multer.File;
-  files?: Express.Multer.File[];
+export interface IRequestUser {
+  _id: string;
+  id: string;
+  role: 'doctor' | 'petOwner' | 'admin';
+  pets?: Types.ObjectId[]; // For pet owners
+  firstName?: string;
+  lastName?: string;
 }

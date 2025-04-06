@@ -1,25 +1,27 @@
-//File: src/errors/ApiError.ts
+// File: src/errors/ApiError.ts
 import httpStatus from 'http-status';
 
 export class ApiError extends Error {
   statusCode: number;
   isOperational: boolean;
-  details?: any[]; // Add optional details field
+  details?: Record<string, unknown> | unknown[];
 
   constructor(
     statusCode: number,
     message: string,
-    isOperational = true,
-    stack = '',
-    details?: any[] // Add details parameter
+    options: {
+      isOperational?: boolean;
+      stack?: string;
+      details?: Record<string, unknown> | unknown[];
+    } = {}
   ) {
     super(message);
     this.statusCode = statusCode;
-    this.isOperational = isOperational;
-    this.details = details; // Assign details
-    
-    if (stack) {
-      this.stack = stack;
+    this.isOperational = options.isOperational ?? true;
+    this.details = options.details;
+
+    if (options.stack) {
+      this.stack = options.stack;
     } else {
       Error.captureStackTrace(this, this.constructor);
     }
@@ -27,19 +29,25 @@ export class ApiError extends Error {
 }
 
 export class NotFoundError extends ApiError {
-  constructor(message = 'Resource not found', details?: any[]) {
-    super(httpStatus.NOT_FOUND, message, true, '', details);
+  constructor(message = 'Resource not found', details?: Record<string, unknown> | unknown[]) {
+    super(httpStatus.NOT_FOUND, message, { details });
   }
 }
 
 export class BadRequestError extends ApiError {
-  constructor(message = 'Bad request', details?: any[]) {
-    super(httpStatus.BAD_REQUEST, message, true, '', details);
+  constructor(message = 'Bad request', details?: Record<string, unknown> | unknown[]) {
+    super(httpStatus.BAD_REQUEST, message, { details });
   }
 }
 
 export class UnauthorizedError extends ApiError {
-  constructor(message = 'Unauthorized', details?: any[]) {
-    super(httpStatus.UNAUTHORIZED, message, true, '', details);
+  constructor(message = 'Unauthorized', details?: Record<string, unknown> | unknown[]) {
+    super(httpStatus.UNAUTHORIZED, message, { details });
+  }
+}
+
+export class ForbiddenError extends ApiError {
+  constructor(message: string, details?: Record<string, unknown> | unknown[]) {
+    super(httpStatus.FORBIDDEN, message, { details });
   }
 }

@@ -15,20 +15,26 @@ import {
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useNavigate } from 'react-router-dom'
+import { Loader2 } from 'lucide-react'
+import { useState } from 'react'
 
 const formSchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(8, 'Password must be at least 8 characters'),
+  confirmPassword: z.string().min(8, 'Please confirm your password'),
   firstName: z.string().min(2, 'First name must be at least 2 characters'),
   lastName: z.string().min(2, 'Last name must be at least 2 characters'),
   phone: z.string().min(10, 'Phone number must be at least 10 characters'),
   address: z.object({
-    street: z.string().min(2),
-    city: z.string().min(2),
-    state: z.string().min(2),
-    zipCode: z.string().min(2),
-    country: z.string().min(2),
+    street: z.string().min(2, 'Street must be at least 2 characters'),
+    city: z.string().min(2, 'City must be at least 2 characters'),
+    state: z.string().min(2, 'State must be at least 2 characters'),
+    zipCode: z.string().min(2, 'ZIP code must be at least 2 characters'),
+    country: z.string().min(2, 'Country must be at least 2 characters'),
   }),
+}).refine((data) => data.password === data.confirmPassword, {
+  message: "Passwords don't match",
+  path: ["confirmPassword"]
 })
 
 type FormValues = z.infer<typeof formSchema>
@@ -39,11 +45,14 @@ interface RegisterFormProps {
 
 export function RegisterForm({ onSuccess }: RegisterFormProps) {
   const navigate = useNavigate()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: '',
       password: '',
+      confirmPassword: '',
       firstName: '',
       lastName: '',
       phone: '',
@@ -58,13 +67,19 @@ export function RegisterForm({ onSuccess }: RegisterFormProps) {
   })
 
   async function onSubmit(values: FormValues) {
+    setIsSubmitting(true)
     try {
-      const response = await authService.registerPetOwner(values)
+      // Remove confirmPassword before sending to API
+      const submitData = { ...values, confirmPassword: undefined }
+      await authService.registerPetOwner(submitData)
       toast.success('Registration successful!')
       navigate('/owner')
       onSuccess?.()
     } catch (error) {
       toast.error('Registration failed. Please try again.')
+      console.error('Registration error:', error)
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -114,19 +129,34 @@ export function RegisterForm({ onSuccess }: RegisterFormProps) {
           )}
         />
         
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <Input type="password" placeholder="••••••••" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div className="grid grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl>
+                  <Input type="password" placeholder="••••••••" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="confirmPassword"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Confirm Password</FormLabel>
+                <FormControl>
+                  <Input type="password" placeholder="••••••••" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
         
         <FormField
           control={form.control}
@@ -210,8 +240,15 @@ export function RegisterForm({ onSuccess }: RegisterFormProps) {
           />
         </div>
         
-        <Button type="submit" className="w-full">
-          Register
+        <Button type="submit" className="w-full" disabled={isSubmitting}>
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Registering...
+            </>
+          ) : (
+            'Register'
+          )}
         </Button>
       </form>
     </Form>

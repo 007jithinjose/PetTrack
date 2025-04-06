@@ -1,7 +1,7 @@
-//File: src/interfaces/appointment.interface.ts
+// File: src/interfaces/appointment.interface.ts
 import { Document, Types } from 'mongoose';
 import { IPet } from './pet.interface'; 
-import { IDoctor } from './user.interface';
+import { IDoctor, IPetOwner } from './user.interface';
 
 export enum AppointmentStatus {
   PENDING = 'pending',
@@ -17,11 +17,13 @@ export interface IAppointment extends Document {
   status: AppointmentStatus;
   reason: string;
   notes?: string;
+  createdBy: Types.ObjectId | IPetOwner;
   createdAt: Date;
   updatedAt: Date;
 }
 
-export interface IAppointmentPopulated extends Omit<IAppointment, 'pet' | 'doctor'> {
+export interface IAppointmentPopulated extends Omit<IAppointment, 'pet' | 'doctor' | 'createdBy'> {
   pet: IPet;
   doctor: IDoctor;
+  createdBy: IPetOwner;
 }

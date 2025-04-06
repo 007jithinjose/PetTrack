@@ -8,3 +8,6 @@ export * from './hospital.interface';
 export * from './prescription.interface';
 export * from './notification.interface';
 export * from './hospital.interface';
+export * from './request.interface';
+export * from './dto.interface';
+export * from './service.interface';
