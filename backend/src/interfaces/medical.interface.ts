@@ -14,3 +14,10 @@ export interface IMedicalRecord extends Document {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export interface ISymptomSuggestion {
+  symptom: string;
+  possibleDiagnoses: string[];
+  suggestedTreatments: string[];
+  recommendedTests: string[];
+}

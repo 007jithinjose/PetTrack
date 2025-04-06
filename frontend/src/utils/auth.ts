@@ -1,5 +1,7 @@
 // src/utils/auth.ts
 interface UserData {
+  email: string;
+  name: string;
   _id: string;
   role: 'petOwner' | 'doctor';
   token: string;

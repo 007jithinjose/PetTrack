@@ -1,24 +1,51 @@
 // src/pages/DoctorDashboard.tsx
-import { MainNav } from '@/components/layout/MainNav';
-import { useNavigate } from 'react-router-dom';
+import { DoctorAppointments } from '@/components/appointments/DoctorAppointments';
+import { Badge } from '@/components/ui/badge';
+import { useQuery } from '@tanstack/react-query';
+import { authService } from '@/services/apiService';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export function DoctorDashboard() {
-  const navigate = useNavigate();
+  
+  // Get current user data
+  const { data: user, isLoading } = useQuery({
+    queryKey: ['current-user'],
+    queryFn: () => {
+      const userData = authService.getCurrentUser();
+      return Promise.resolve(userData);
+    },
+  });
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <main className="flex-1 p-4 md:p-6">
+          <div className="flex justify-between items-center mb-6">
+            <Skeleton className="h-8 w-48" />
+            <div className="flex items-center gap-2">
+              <Skeleton className="h-8 w-24" />
+              <Skeleton className="h-8 w-32" />
+            </div>
+          </div>
+          <DoctorAppointments />
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b">
-        <MainNav />
-      </header>
-      
-      <main className="flex-1 p-4">
+      <main className="flex-1 p-4 md:p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">Doctor Dashboard</h1>
+          <div className="flex items-center gap-2">
+            <Badge variant="secondary">
+              {user?.name || 'Doctor'}
+            </Badge>
+          </div>
         </div>
-        
-        {/* Dashboard content goes here */}
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {/* Add your dashboard components here */}
-        </div>
+
+        <DoctorAppointments />
       </main>
     </div>
   );

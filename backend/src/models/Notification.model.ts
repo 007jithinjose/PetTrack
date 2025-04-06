@@ -1,22 +1,12 @@
 //File src/models/Notfication.model.ts
-import { Schema, model, Document, Types } from 'mongoose';
+import { Schema, model } from 'mongoose';
+import { INotification } from '../interfaces';
 
 export enum NotificationType {
   APPOINTMENT = 'appointment',
   VACCINATION = 'vaccination',
   REMINDER = 'reminder',
   SYSTEM = 'system'
-}
-
-export interface INotification extends Document {
-  user: Types.ObjectId;
-  type: NotificationType;
-  title: string;
-  message: string;
-  relatedEntity?: Types.ObjectId;
-  read: boolean;
-  createdAt: Date;
-  updatedAt: Date;
 }
 
 const notificationSchema = new Schema<INotification>(

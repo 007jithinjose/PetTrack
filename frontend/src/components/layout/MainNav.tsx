@@ -7,14 +7,18 @@ import { PawPrintIcon } from '@/pages/LandingPage';
 
 export function MainNav() {
   const userData = getUserData();
+  const isDoctor = userData?.role.toLowerCase() === 'doctor';
+  const isPetOwner = ['petowner', 'pet-owner', 'owner'].includes(userData?.role.toLowerCase() || '');
 
   // Determine dashboard URL based on user role
   const getDashboardUrl = () => {
     if (!userData) return '/';
-    const role = userData.role.toLowerCase();
-    if (role === 'doctor') return '/doctor';
-    if (['petowner', 'pet-owner', 'owner'].includes(role)) return '/owner';
-    return '/';
+    return isDoctor ? '/doctor' : isPetOwner ? '/owner' : '/';
+  };
+
+  // Determine appointments URL based on user role
+  const getAppointmentsUrl = () => {
+    return isDoctor ? '/doctor/appointments' : '/appointments';
   };
 
   return (
@@ -29,12 +33,12 @@ export function MainNav() {
         </Link>
         {isAuthenticated() && (
           <>
-            {userData?.role.toLowerCase() === 'petowner' && (
+            {isPetOwner && (
               <Link to="/pets" className="text-sm font-medium">
                 My Pets
               </Link>
             )}
-            <Link to="/appointments" className="text-sm font-medium">
+            <Link to={getAppointmentsUrl()} className="text-sm font-medium">
               Appointments
             </Link>
           </>

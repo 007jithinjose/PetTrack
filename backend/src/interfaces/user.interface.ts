@@ -40,5 +40,9 @@ export interface IDoctor extends IUser {
 export interface IUserMethods {
   comparePassword(candidatePassword: string): Promise<boolean>;
 }
-
+export enum UserRole {
+  ADMIN = 'admin',
+  DOCTOR = 'doctor',
+  PET_OWNER = 'petOwner'
+}
 export type UserModel = Model<IUser, {}, IUserMethods>;

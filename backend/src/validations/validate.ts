@@ -1,6 +1,6 @@
 //File: src/validations/validate.ts
 import { Request, Response, NextFunction } from 'express';
-import { AnyZodObject } from 'zod';
+import { AnyZodObject, z } from 'zod';
 import { BadRequestError } from '../errors/ApiError';
 
 export const validate = (schema: AnyZodObject) => 
@@ -13,6 +13,9 @@ export const validate = (schema: AnyZodObject) =>
       });
       next();
     } catch (error) {
-      throw new BadRequestError(error.errors[0].message);
+      if (error instanceof z.ZodError) {
+        throw new BadRequestError(error.errors[0].message);
+      }
+      throw error;
     }
   };
