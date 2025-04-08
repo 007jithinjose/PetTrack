@@ -1,4 +1,4 @@
-// src/App.tsx
+// File: src/App.tsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
 import { LandingPage } from './pages/LandingPage';
@@ -13,8 +13,8 @@ import { EditPetPage } from './pages/EditPetPage';
 import { AppointmentBooking } from './pages/AppointmentBooking';
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
 import { DoctorAppointmentsPage } from './pages/DoctorAppointmentsPage';
+import { DoctorAppointmentRecordsPage } from './pages/DoctorAppointmentRecordsPage';
 
-// src/App.tsx
 function App() {
   return (
     <>
@@ -32,6 +32,10 @@ function App() {
             {/* Doctor routes */}
             <Route path="/doctor" element={<DoctorDashboard />} />
             <Route path="/doctor/appointments" element={<DoctorAppointmentsPage />} />
+            <Route 
+              path="/doctor/appointments/:id/records" 
+              element={<DoctorAppointmentRecordsPage />} 
+            />
             
             {/* Pet management routes */}
             <Route path="/pets" element={<PetManagement />} />

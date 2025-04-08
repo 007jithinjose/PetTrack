@@ -19,9 +19,12 @@ const appointmentSchema = new Schema<IAppointment>(
       required: true,
       validate: {
         validator: function(value: Date) {
-          return value > new Date();
+          // Allow dates today or in the future
+          const today = new Date();
+          today.setHours(0, 0, 0, 0); // Set to start of day
+          return value >= today;
         },
-        message: 'Appointment date must be in the future'
+        message: 'Appointment date must be today or in the future'
       }
     },
     status: {

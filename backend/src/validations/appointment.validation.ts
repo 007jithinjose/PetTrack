@@ -19,8 +19,12 @@ const appointmentBaseSchema = z.object({
   }).datetime({
     message: "Invalid ISO 8601 date format"
   }).refine(
-    date => new Date(date) > new Date(), 
-    "Appointment date must be in the future"
+    date => {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return new Date(date) >= today;
+    }, 
+    "Appointment date must be today or in the future"
   ),
   reason: z.string({
     required_error: "Reason is required",

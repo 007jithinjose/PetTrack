@@ -38,7 +38,7 @@ export function AppointmentBooking() {
     enabled: !!user?._id
   });
 
-  // Fetch appointments for the current owner's pets
+  // Fetch appointments for each pet individually and combine results
   const { 
     data: appointments = [], 
     isLoading: isLoadingAppointments,
@@ -46,14 +46,22 @@ export function AppointmentBooking() {
     refetch: refetchAppointments
   } = useQuery({
     queryKey: ['myAppointments', user?._id],
-    queryFn: () => {
-      const petIds = pets.map(pet => pet._id);
-      return appointmentService.getAppointments({
-        petId: petIds // Now sends as array
-      });
+    queryFn: async () => {
+      if (!pets.length) return [];
+      
+      // Fetch appointments for each pet in parallel
+      const appointmentPromises = pets.map(pet => 
+        appointmentService.getAppointments({ petId: pet._id })
+      );
+      
+      const responses = await Promise.all(appointmentPromises);
+      
+      // Combine all appointments into a single array
+      return responses.flatMap(response => 
+        Array.isArray(response.data) ? response.data : []
+      );
     },
-    enabled: !!user?._id && pets.length > 0,
-    select: (res) => Array.isArray(res.data) ? res.data : []
+    enabled: !!user?._id && pets.length > 0
   });
 
   // Debug effect to log data

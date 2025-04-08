@@ -28,6 +28,8 @@ import {
   PaginatedAppointments,
 } from './interfaces/appointment.interface';
 import qs from 'qs';
+import { CreateMedicalRecordInput, MedicalRecordResponse, TreatmentSuggestionResponse } from './interfaces/medical.interface'; // Ensure this path is correct
+import { PrescriptionResponse, CreatePrescriptionInput } from './interfaces';
 
 // Base response interface
 export interface ApiResponse<T = any> {
@@ -456,11 +458,127 @@ export const petOwnerService = {
   },
 };
 
+/**
+ * Medical Records Service
+ */
+export const medicalService = {
+  createMedicalRecord: async (
+    petId: string, 
+    data: CreateMedicalRecordInput
+  ): Promise<ApiResponse<MedicalRecordResponse>> => {
+    try {
+      const response = await apiClient.post(`/medical/pets/${petId}/records`, data);
+      return response.data;
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  },
+
+  getPetMedicalRecords: async (
+    petId: string,
+    params?: { 
+      limit?: number;
+      page?: number;
+    }
+  ): Promise<ApiResponse<{
+    data: MedicalRecordResponse[];
+    meta: {
+      total: number;
+      page: number;
+      limit: number;
+      pages: number;
+    };
+  }>> => {
+    try {
+      const response = await apiClient.get(`/medical/pets/${petId}/records`, { params });
+      return response.data;
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  },
+
+  suggestTreatments: async (
+    symptoms: string[]
+  ): Promise<ApiResponse<TreatmentSuggestionResponse>> => {
+    try {
+      const response = await apiClient.post('/medical/suggestions', { symptoms });
+      return response.data;
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  },
+
+  getMedicalRecord: async (
+    id: string
+  ): Promise<ApiResponse<MedicalRecordResponse>> => {
+    try {
+      const response = await apiClient.get(`/medical/records/${id}`);
+      return response.data;
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  },
+
+  updateMedicalRecord: async (
+    id: string,
+    data: Partial<CreateMedicalRecordInput>
+  ): Promise<ApiResponse<MedicalRecordResponse>> => {
+    try {
+      const response = await apiClient.patch(`/medical/records/${id}`, data);
+      return response.data;
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  },
+
+  getAppointmentRecords: async (
+    appointmentId: string
+  ): Promise<ApiResponse<MedicalRecordResponse[]>> => {
+    try {
+      const response = await apiClient.get(`/medical/appointments/${appointmentId}/records`);
+      console.log(response);
+      return response.data;
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  }
+};
+
+/**
+ * Prescription Service
+ */
+export const prescriptionService = {
+  getPetPrescriptions: (petId: string): Promise<AxiosResponse<PaginatedResponse<PrescriptionResponse>>> =>
+    apiClient.get(`/prescriptions/pets/${petId}/prescriptions`),
+    
+  createPrescription: (petId: string, data: CreatePrescriptionInput): Promise<AxiosResponse<PrescriptionResponse>> =>
+    apiClient.post(`/prescriptions/pets/${petId}/prescriptions`, data),
+    
+  generatePrescriptionPDF: (id: string): Promise<AxiosResponse<Blob>> =>
+    apiClient.get(`/prescriptions/${id}/pdf`, { responseType: 'blob' }),
+    
+  getPrescription: (id: string): Promise<AxiosResponse<PrescriptionResponse>> =>
+    apiClient.get(`/prescriptions/${id}`)
+};
+
+
+// Add PaginatedResponse interface
+interface PaginatedResponse<T> {
+  data: T[];
+  meta: {
+    total: number;
+    page: number;
+    limit: number;
+    pages: number;
+  };
+}
 // Export all services
 export default {
   authService,
   hospitalService,
   petService,
   appointmentService,
-  petOwnerService
+  petOwnerService,
+  medicalService,
+  prescriptionService,
 };

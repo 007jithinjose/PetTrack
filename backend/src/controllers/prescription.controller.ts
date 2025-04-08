@@ -1,52 +1,91 @@
-// File: src/controllers/prescription.controller.ts
+//File: src/controllers/prescription.controller.ts
 import { Request, Response } from 'express';
 import Prescription from '../models/Prescription.model';
 import { catchAsync } from '../utils/catchAsync';
 import { ApiError } from '../errors/ApiError';
 import { Types } from 'mongoose';
 import { IRequestUser } from '../interfaces';
+import Appointment from '../models/Appointment.model';
+import { CreatePrescriptionInput } from '../validations/prescription.validation';
+import { Pet } from '../models';
 
 interface AuthenticatedRequest extends Request {
   user?: IRequestUser;
 }
 
 export const createPrescription = catchAsync(async (req: AuthenticatedRequest, res: Response) => {
+  // Proper type casting
+  const { body } = req as unknown as CreatePrescriptionInput;
   const { petId } = req.params;
+  const doctorId = req.user?._id;
   
-  if (!req.user?._id) {
+  if (!doctorId) {
     throw new ApiError(401, 'Not authenticated');
   }
 
-  const prescription = await Prescription.create({
-    ...req.body,
+  // Check if there's a confirmed appointment for this pet-doctor pair
+  const appointment = await Appointment.findOne({
     pet: petId,
-    doctor: req.user._id
+    doctor: doctorId,
+    status: 'confirmed',
+    date: { $lte: new Date() }
   });
-  
+
+  if (!appointment) {
+    throw new ApiError(400, 'No confirmed appointment found for this pet and doctor');
+  }
+
+  const prescription = await Prescription.create({
+    ...body,
+    pet: petId,
+    doctor: doctorId,
+    appointment: appointment._id
+  });
+
   res.status(201).json(prescription);
 });
 
-export const getPetPrescriptions = catchAsync(async (req: Request, res: Response) => {
+export const getPetPrescriptions = catchAsync(async (req: AuthenticatedRequest, res: Response) => {
   const { petId } = req.params;
+  const { limit, page } = req.query as { limit?: string; page?: string };
+  const userId = req.user?._id;
   
-  if (!Types.ObjectId.isValid(petId)) {
-    throw new ApiError(400, 'Invalid pet ID');
+  // Verify the pet belongs to the user (for pet owners)
+  if (req.user?.role === 'petOwner') {
+    const pet = await Pet.findById(petId);
+    if (!pet || pet.owner.toString() !== userId?.toString()) {
+      throw new ApiError(403, 'You can only view prescriptions for your own pets');
+    }
   }
 
-  const prescriptions = await Prescription.find({ pet: petId })
-    .populate('doctor', 'name')
-    .populate('pet', 'name')
-    .sort({ date: -1 });
-    
-  res.json(prescriptions);
+  const parsedLimit = limit ? parseInt(limit) : 10;
+  const parsedPage = page ? parseInt(page) : 1;
+  const skip = (parsedPage - 1) * parsedLimit;
+
+  const [prescriptions, total] = await Promise.all([
+    Prescription.find({ pet: petId })
+      .populate('doctor', 'name')
+      .populate('pet', 'name')
+      .sort({ date: -1 })
+      .skip(skip)
+      .limit(parsedLimit),
+    Prescription.countDocuments({ pet: petId })
+  ]);
+
+  res.json({
+    data: prescriptions,
+    meta: {
+      total,
+      page: parsedPage,
+      limit: parsedLimit,
+      pages: Math.ceil(total / parsedLimit)
+    }
+  });
 });
 
 export const generatePrescriptionPDF = catchAsync(async (req: AuthenticatedRequest, res: Response) => {
   const { id } = req.params;
-  
-  if (!Types.ObjectId.isValid(id)) {
-    throw new ApiError(400, 'Invalid prescription ID');
-  }
+  const userId = req.user?._id;
 
   const prescription = await Prescription.findById(id)
     .populate<{ doctor: { _id: Types.ObjectId, name: string }, pet: { _id: Types.ObjectId, name: string } }>([
@@ -58,13 +97,17 @@ export const generatePrescriptionPDF = catchAsync(async (req: AuthenticatedReque
     throw new ApiError(404, 'Prescription not found');
   }
 
-  // Type guard to ensure populated fields exist
-  if (!prescription.doctor || !prescription.pet || typeof prescription.doctor.name !== 'string' || typeof prescription.pet.name !== 'string') {
-    throw new ApiError(500, 'Failed to populate prescription data');
+  // Verify access
+  if (req.user?.role === 'petOwner') {
+    const pet = await Pet.findById(prescription.pet);
+    if (!pet || pet.owner.toString() !== userId?.toString()) {
+      throw new ApiError(403, 'You can only view prescriptions for your own pets');
+    }
+  } else if (req.user?.role === 'doctor' && prescription.doctor._id.toString() !== userId?.toString()) {
+    throw new ApiError(403, 'You can only view your own prescriptions');
   }
 
   // In a real app, you would use a PDF generation library like pdfkit
-  // This is a simplified version
   const prescriptionText = `
     PRESCRIPTION
     Date: ${prescription.date.toISOString().split('T')[0]}
@@ -81,4 +124,30 @@ export const generatePrescriptionPDF = catchAsync(async (req: AuthenticatedReque
   
   res.setHeader('Content-Type', 'text/plain');
   res.send(prescriptionText);
+});
+
+export const getPrescription = catchAsync(async (req: AuthenticatedRequest, res: Response) => {
+  const { id } = req.params;
+  const userId = req.user?._id;
+
+  const prescription = await Prescription.findById(id)
+    .populate('doctor', 'name')
+    .populate('pet', 'name')
+    .populate('appointment', 'date reason');
+
+  if (!prescription) {
+    throw new ApiError(404, 'Prescription not found');
+  }
+
+  // Verify access
+  if (req.user?.role === 'petOwner') {
+    const pet = await Pet.findById(prescription.pet);
+    if (!pet || pet.owner.toString() !== userId?.toString()) {
+      throw new ApiError(403, 'You can only view prescriptions for your own pets');
+    }
+  } else if (req.user?.role === 'doctor' && prescription.doctor._id.toString() !== userId?.toString()) {
+    throw new ApiError(403, 'You can only view your own prescriptions');
+  }
+
+  res.json(prescription);
 });
