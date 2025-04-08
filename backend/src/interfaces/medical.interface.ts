@@ -9,8 +9,9 @@ export interface IMedicalRecord extends Document {
   prescribedMedications: string[];
   doctor: Types.ObjectId;
   pet: Types.ObjectId;
+  appointment: Types.ObjectId;
   notes?: string;
-  followUpDate?: Date;
+  followUpDate?: Date | null;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -19,5 +20,6 @@ export interface ISymptomSuggestion {
   symptom: string;
   possibleDiagnoses: string[];
   suggestedTreatments: string[];
+  suggestedMedications: string[];
   recommendedTests: string[];
 }

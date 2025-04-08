@@ -1,4 +1,3 @@
-//src/components/appointments/AppointmentCard.tsx
 import { Appointment, AppointmentStatus } from '@/services/interfaces/appointment.interface';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -18,6 +17,7 @@ interface AppointmentCardProps {
   isDoctorView?: boolean;
   isReadOnly?: boolean;
   className?: string;
+  additionalActions?: React.ReactNode;
 }
 
 export function AppointmentCard({ 
@@ -27,7 +27,8 @@ export function AppointmentCard({
   onConfirm,
   isDoctorView = false,
   isReadOnly = false,
-  className = ''
+  className = '',
+  additionalActions
 }: AppointmentCardProps) {
   const statusVariantMap: Record<AppointmentStatus, "secondary" | "default" | "destructive" | "outline"> = {
     [AppointmentStatus.PENDING]: 'secondary',
@@ -142,74 +143,84 @@ export function AppointmentCard({
         </div>
 
         {/* Actions */}
-        {!isReadOnly && (
-          <div className="mt-6 flex gap-3">
-            {isDoctorView ? (
-              <>
-                {appointment.status === AppointmentStatus.PENDING && (
-                  <>
-                    {onConfirm && (
-                      <Button
-                        variant="default"
-                        className="flex-1 gap-2"
-                        onClick={() => onConfirm?.(appointment.id)}
-                      >
-                        <Check className="h-4 w-4" />
-                        Confirm
-                      </Button>
-                    )}
-                    {onCancel && (
-                      <Button
-                        variant="destructive"
-                        className="flex-1 gap-2"
-                        onClick={() => onCancel?.(appointment.id)}
-                      >
-                        <X className="h-4 w-4" />
-                        Cancel
-                      </Button>
-                    )}
-                  </>
-                )}
-                {appointment.status === AppointmentStatus.CONFIRMED && onReschedule && (
-                  <Button
-                    variant="outline"
-                    className="flex-1 gap-2"
-                    onClick={() => onReschedule?.(appointment.id)}
-                  >
-                    <CalendarDays className="h-4 w-4" />
-                    Reschedule
-                  </Button>
-                )}
-              </>
-            ) : (
-              <>
-                {appointment.status === AppointmentStatus.PENDING && (
-                  <>
-                    {onReschedule && (
-                      <Button
-                        variant="outline"
-                        className="flex-1 gap-2"
-                        onClick={() => onReschedule?.(appointment.id)}
-                      >
-                        <CalendarDays className="h-4 w-4" />
-                        Reschedule
-                      </Button>
-                    )}
-                    {onCancel && (
-                      <Button
-                        variant="destructive"
-                        className="flex-1 gap-2"
-                        onClick={() => onCancel?.(appointment.id)}
-                      >
-                        Cancel
-                      </Button>
-                    )}
-                  </>
-                )}
-              </>
-            )}
-          </div>
-        )}
+        <div className="mt-6 flex flex-col gap-3">
+          {/* Show main actions only if not read-only */}
+          {!isReadOnly && (
+            <div className="flex gap-3">
+              {isDoctorView ? (
+                <>
+                  {appointment.status === AppointmentStatus.PENDING && (
+                    <>
+                      {onConfirm && (
+                        <Button
+                          variant="default"
+                          className="flex-1 gap-2"
+                          onClick={() => onConfirm?.(appointment.id)}
+                        >
+                          <Check className="h-4 w-4" />
+                          Confirm
+                        </Button>
+                      )}
+                      {onCancel && (
+                        <Button
+                          variant="destructive"
+                          className="flex-1 gap-2"
+                          onClick={() => onCancel?.(appointment.id)}
+                        >
+                          <X className="h-4 w-4" />
+                          Cancel
+                        </Button>
+                      )}
+                    </>
+                  )}
+                  {appointment.status === AppointmentStatus.CONFIRMED && onReschedule && (
+                    <Button
+                      variant="outline"
+                      className="flex-1 gap-2"
+                      onClick={() => onReschedule?.(appointment.id)}
+                    >
+                      <CalendarDays className="h-4 w-4" />
+                      Reschedule
+                    </Button>
+                  )}
+                </>
+              ) : (
+                <>
+                  {appointment.status === AppointmentStatus.PENDING && (
+                    <>
+                      {onReschedule && (
+                        <Button
+                          variant="outline"
+                          className="flex-1 gap-2"
+                          onClick={() => onReschedule?.(appointment.id)}
+                        >
+                          <CalendarDays className="h-4 w-4" />
+                          Reschedule
+                        </Button>
+                      )}
+                      {onCancel && (
+                        <Button
+                          variant="destructive"
+                          className="flex-1 gap-2"
+                          onClick={() => onCancel?.(appointment.id)}
+                        >
+                          Cancel
+                        </Button>
+                      )}
+                    </>
+                  )}
+                </>
+              )}
+            </div>
+          )}
+          
+          {/* Always show additional actions if they exist */}
+          {additionalActions && (
+            <div className="flex gap-3">
+              {additionalActions}
+            </div>
+          )}
+        </div>
       </CardContent>
     </Card>
   );
