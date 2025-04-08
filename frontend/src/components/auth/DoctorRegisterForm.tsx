@@ -1,9 +1,9 @@
 // src/components/auth/DoctorRegisterForm.tsx
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { authService, hospitalService } from '@/services/apiService';
-import { toast } from 'sonner';
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { authService, hospitalService } from "@/services/apiService";
+import { toast } from "sonner";
 import {
   Form,
   FormControl,
@@ -11,51 +11,26 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
-} from '@/components/ui/select';
-import { Loader2 } from 'lucide-react';
-import { AxiosError } from 'axios';
-import { handleApiError } from '@/utils/errorHandler';
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Loader2 } from "lucide-react";
+import { AxiosError } from "axios";
+import { handleApiError } from "@/utils/errorHandler";
 
-const formSchema = z.object({
-  email: z.string()
-    .min(1, 'Email is required')
-    .email('Invalid email address'),
-  password: z.string()
-    .min(8, 'Password must be at least 8 characters')
-    .regex(/[A-Z]/, 'Password must contain at least one uppercase letter')
-    .regex(/[a-z]/, 'Password must contain at least one lowercase letter')
-    .regex(/[0-9]/, 'Password must contain at least one number'),
-  confirmPassword: z.string()
-    .min(1, 'Please confirm your password'),
-  name: z.string()
-    .min(2, 'Name must be at least 2 characters')
-    .max(50, 'Name must be less than 50 characters'),
-  specialization: z.string()
-    .min(2, 'Specialization must be at least 2 characters')
-    .max(50, 'Specialization must be less than 50 characters'),
-  hospital: z.string()
-    .min(1, 'Please select a hospital'),
-  contactNumber: z.string()
-    .min(10, 'Contact number must be at least 10 characters')
-    .max(15, 'Contact number must be less than 15 characters')
-    .regex(/^[+]?[0-9]+$/, 'Contact number must contain only numbers and optional + prefix'),
-}).refine((data) => data.password === data.confirmPassword, {
-  message: "Passwords don't match",
-  path: ["confirmPassword"]
-});
-
-type FormValues = z.infer<typeof formSchema>;
+interface ApiErrorResponse {
+  message?: string;
+  errors?: Record<string, string[]>;
+}
 
 interface Hospital {
   _id: string;
@@ -66,12 +41,50 @@ interface DoctorRegisterFormProps {
   onSuccess?: () => void;
 }
 
+const formSchema = z
+  .object({
+    email: z
+      .string()
+      .min(1, "Email is required")
+      .email("Invalid email address"),
+    password: z
+      .string()
+      .min(8, "Password must be at least 8 characters")
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+      .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string().min(1, "Please confirm your password"),
+    name: z
+      .string()
+      .min(2, "Name must be at least 2 characters")
+      .max(50, "Name must be less than 50 characters"),
+    specialization: z
+      .string()
+      .min(2, "Specialization must be at least 2 characters")
+      .max(50, "Specialization must be less than 50 characters"),
+    hospital: z.string().min(1, "Please select a hospital"),
+    contactNumber: z
+      .string()
+      .min(10, "Contact number must be at least 10 characters")
+      .max(15, "Contact number must be less than 15 characters")
+      .regex(
+        /^[+]?[0-9]+$/,
+        "Contact number must contain only numbers and optional + prefix"
+      ),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ["confirmPassword"],
+  });
+
+type FormValues = z.infer<typeof formSchema>;
+
 export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
   const navigate = useNavigate();
   const [hospitals, setHospitals] = useState<Hospital[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   useEffect(() => {
     const loadHospitals = async () => {
       try {
@@ -79,13 +92,13 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
         if (response.data && Array.isArray(response.data)) {
           setHospitals(response.data);
         } else {
-          toast.error('Invalid hospital data format received');
+          toast.error("Invalid hospital data format received");
           setHospitals([]);
         }
       } catch (error) {
         const errorMessage = handleApiError(error);
         toast.error(errorMessage);
-        console.error('Hospital loading error:', error);
+        console.error("Hospital loading error:", error);
         setHospitals([]);
       } finally {
         setIsLoading(false);
@@ -97,50 +110,49 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    mode: 'onBlur',
+    mode: "onBlur",
     defaultValues: {
-      email: '',
-      password: '',
-      confirmPassword: '',
-      name: '',
-      specialization: '',
-      hospital: '',
-      contactNumber: '',
+      email: "",
+      password: "",
+      confirmPassword: "",
+      name: "",
+      specialization: "",
+      hospital: "",
+      contactNumber: "",
     },
   });
 
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
     try {
-      const { confirmPassword, ...submitData } = values;
-      
+      // Remove confirmPassword without ESLint warning
+      const { confirmPassword: _, ...submitData } = values;
+
       await authService.registerDoctor(submitData);
-      
-      toast.success('Registration successful! You can now login.');
+
+      toast.success("Registration successful! You can now login.");
       onSuccess?.();
-      navigate('/auth/login');
+      navigate("/auth/login");
     } catch (error) {
-      const err = error as AxiosError;
-      
-      // Handle backend validation errors
-      if (err.response?.status === 400 && err.response?.data?.errors) {
+      const err = error as AxiosError<ApiErrorResponse>;
+
+      if (err.response?.data?.errors) {
         const backendErrors = err.response.data.errors;
-        
+
         Object.keys(backendErrors).forEach((field) => {
           form.setError(field as keyof FormValues, {
-            type: 'manual',
-            message: backendErrors[field].join(', ')
+            type: "manual",
+            message: backendErrors[field].join(", "),
           });
         });
-        
-        toast.error('Please fix the errors in the form');
+
+        toast.error("Please fix the errors in the form");
       } else {
-        // Use our centralized error handler for other errors
         const errorMessage = handleApiError(error);
         toast.error(errorMessage);
       }
-      
-      console.error('Registration error:', error);
+
+      console.error("Registration error:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -156,17 +168,13 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
             <FormItem>
               <FormLabel>Full Name</FormLabel>
               <FormControl>
-                <Input 
-                  placeholder="Dr. Smith" 
-                  {...field} 
-                  autoComplete="name"
-                />
+                <Input placeholder="Dr. Smith" {...field} autoComplete="name" />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="email"
@@ -174,10 +182,10 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input 
-                  type="email" 
-                  placeholder="your@email.com" 
-                  {...field} 
+                <Input
+                  type="email"
+                  placeholder="your@email.com"
+                  {...field}
                   autoComplete="email"
                 />
               </FormControl>
@@ -185,7 +193,7 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
             </FormItem>
           )}
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -194,10 +202,10 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input 
-                    type="password" 
-                    placeholder="••••••••" 
-                    {...field} 
+                  <Input
+                    type="password"
+                    placeholder="••••••••"
+                    {...field}
                     autoComplete="new-password"
                   />
                 </FormControl>
@@ -212,10 +220,10 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
               <FormItem>
                 <FormLabel>Confirm Password</FormLabel>
                 <FormControl>
-                  <Input 
-                    type="password" 
-                    placeholder="••••••••" 
-                    {...field} 
+                  <Input
+                    type="password"
+                    placeholder="••••••••"
+                    {...field}
                     autoComplete="new-password"
                   />
                 </FormControl>
@@ -224,7 +232,7 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
             )}
           />
         </div>
-        
+
         <FormField
           control={form.control}
           name="specialization"
@@ -232,43 +240,46 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
             <FormItem>
               <FormLabel>Specialization</FormLabel>
               <FormControl>
-                <Input 
-                  placeholder="Veterinary Surgery" 
-                  {...field} 
-                />
+                <Input placeholder="Veterinary Surgery" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="hospital"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Hospital</FormLabel>
-              <Select 
-                onValueChange={field.onChange} 
+              <Select
+                onValueChange={field.onChange}
                 value={field.value}
                 disabled={isLoading}
               >
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue 
-                      placeholder={isLoading ? "Loading hospitals..." : "Select a hospital"} 
+                    <SelectValue
+                      placeholder={
+                        isLoading ? "Loading hospitals..." : "Select a hospital"
+                      }
                     />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  {hospitals.length > 0 ? (
+                  {isLoading ? (
+                    <SelectItem value="loading" disabled>
+                      Loading hospitals...
+                    </SelectItem>
+                  ) : hospitals.length > 0 ? (
                     hospitals.map((hospital) => (
                       <SelectItem key={hospital._id} value={hospital._id}>
                         {hospital.name}
                       </SelectItem>
                     ))
                   ) : (
-                    <SelectItem value="" disabled>
+                    <SelectItem value="no-hospitals" disabled>
                       No hospitals available
                     </SelectItem>
                   )}
@@ -278,7 +289,7 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="contactNumber"
@@ -286,9 +297,9 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
             <FormItem>
               <FormLabel>Contact Number</FormLabel>
               <FormControl>
-                <Input 
-                  placeholder="+1234567890" 
-                  {...field} 
+                <Input
+                  placeholder="+1234567890"
+                  {...field}
                   autoComplete="tel"
                 />
               </FormControl>
@@ -296,10 +307,10 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
             </FormItem>
           )}
         />
-        
-        <Button 
-          type="submit" 
-          className="w-full" 
+
+        <Button
+          type="submit"
+          className="w-full"
           disabled={isLoading || isSubmitting || !form.formState.isValid}
         >
           {isSubmitting ? (
@@ -308,7 +319,7 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
               Registering...
             </>
           ) : (
-            'Register as Veterinarian'
+            "Register as Veterinarian"
           )}
         </Button>
       </form>
