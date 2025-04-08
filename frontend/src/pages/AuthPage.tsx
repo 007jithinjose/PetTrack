@@ -6,6 +6,7 @@ import { DoctorRegisterForm } from '@/components/auth/DoctorRegisterForm'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card'
 import { PawPrintIcon } from './LandingPage' 
+import { toast } from 'sonner'
 
 export function AuthPage() {
   const navigate = useNavigate()
@@ -66,7 +67,10 @@ export function AuthPage() {
                 <CardTitle className="text-2xl">Create an Account</CardTitle>
               </CardHeader>
               <CardContent>
-                <RegisterForm onSuccess={() => navigate('/owner')} />
+                <RegisterForm onSuccess={() => {
+                  toast.success('Registration successful! Please login');
+                  navigate('/auth/login');
+                }} />
               </CardContent>
               <CardFooter className="flex flex-col items-start gap-2">
                 <p className="text-sm text-muted-foreground">
@@ -96,7 +100,10 @@ export function AuthPage() {
                 <CardTitle className="text-2xl">Veterinarian Registration</CardTitle>
               </CardHeader>
               <CardContent>
-                <DoctorRegisterForm onSuccess={() => navigate('/doctor')} />
+                <DoctorRegisterForm onSuccess={() => {
+                  toast.success('Registration successful! Please login');
+                  navigate('/auth/login');
+                }} />
               </CardContent>
               <CardFooter className="flex flex-col items-start gap-2">
                 <p className="text-sm text-muted-foreground">
