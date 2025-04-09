@@ -1,6 +1,6 @@
 //src/pages/LandingPage.tsx
 import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Input } from "@/components/ui/input"
@@ -13,7 +13,7 @@ export function LandingPage() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Navigation Bar */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between px-4">
+        <div className="container flex h-16 items-center justify-between px-4 mx-auto max-w-7xl 2xl:max-w-[1800px]">
           <div 
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => navigate('/')}
@@ -25,26 +25,30 @@ export function LandingPage() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#features" className="px-4 py-2 font-medium">
+                <NavigationMenuLink href="#features" className="px-4 py-2 font-medium text-sm md:text-base">
                   Features
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#testimonials" className="px-4 py-2 font-medium">
+                <NavigationMenuLink href="#testimonials" className="px-4 py-2 font-medium text-sm md:text-base">
                   Testimonials
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <Button 
               variant="ghost"
               onClick={() => navigate('/auth/login')}
+              className="text-sm md:text-base"
             >
               Login
             </Button>
-            <Button onClick={() => navigate('/auth/register')}>
+            <Button 
+              onClick={() => navigate('/auth/register')}
+              className="text-sm md:text-base"
+            >
               Get Started
             </Button>
           </div>
@@ -52,34 +56,34 @@ export function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="container flex flex-col items-center justify-center gap-8 py-20 text-center">
+      <section className="container flex flex-col items-center justify-center gap-6 py-12 md:py-20 text-center mx-auto max-w-7xl 2xl:max-w-[1800px] px-4">
         <div className="flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-blue-600">
           <span>🐾</span>
           <span>Track your pets with ease</span>
         </div>
         
-        <h1 className="text-5xl font-bold tracking-tight">
-          Comprehensive Pet Care <br />
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          Comprehensive Pet Care <br className="hidden sm:block" />
           <span className="text-blue-600">Management System</span>
         </h1>
         
-        <p className="max-w-2xl text-lg text-muted-foreground">
+        <p className="max-w-2xl text-base md:text-lg text-muted-foreground">
           PetTrack helps pet owners and veterinarians manage pet health records, appointments, 
           and vaccinations all in one place.
         </p>
         
-        <div className="flex gap-4">
-          <Button size="lg">Get Started</Button>
-          <Button size="lg" variant="outline">
+        <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
+          <Button size="lg" className="w-full sm:w-auto">Get Started</Button>
+          <Button size="lg" variant="outline" className="w-full sm:w-auto">
             Learn More
           </Button>
         </div>
         
-        <div className="mt-8 overflow-hidden rounded-xl border shadow-lg">
+        <div className="mt-8 w-full max-w-4xl mx-auto overflow-hidden rounded-xl border shadow-lg">
           <img
             src="images/pet-dashboard-screenshot.jpg"
             alt="PetTrack Dashboard"
-            className="w-full max-w-4xl"
+            className="w-full h-auto"
             width={1200}
             height={800}
           />
@@ -87,10 +91,10 @@ export function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="container py-20">
-        <h2 className="mb-12 text-center text-3xl font-bold">Key Features</h2>
+      <section id="features" className="container py-12 md:py-20 mx-auto max-w-7xl 2xl:max-w-[1800px] px-4">
+        <h2 className="mb-8 md:mb-12 text-center text-2xl md:text-3xl font-bold">Key Features</h2>
         
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <FeatureCard
             icon={<CalendarIcon className="h-6 w-6" />}
             title="Appointment Scheduling"
@@ -110,11 +114,11 @@ export function LandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="bg-blue-50 py-20">
-        <div className="container">
-          <h2 className="mb-12 text-center text-3xl font-bold">What Our Users Say</h2>
+      <section id="testimonials" className="bg-blue-50 py-12 md:py-20">
+        <div className="container mx-auto max-w-7xl 2xl:max-w-[1800px] px-4">
+          <h2 className="mb-8 md:mb-12 text-center text-2xl md:text-3xl font-bold">What Our Users Say</h2>
           
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <TestimonialCard
               name="Sarah Johnson"
               role="Pet Owner"
@@ -138,10 +142,10 @@ export function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="container py-20">
-        <Card className="mx-auto max-w-4xl bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="container py-12 md:py-20 mx-auto max-w-7xl 2xl:max-w-[1800px] px-4">
+        <Card className="mx-auto w-full max-w-4xl bg-gradient-to-r from-blue-600 to-blue-800 text-white">
           <CardHeader>
-            <CardTitle className="text-3xl">Ready to Simplify Pet Care?</CardTitle>
+            <CardTitle className="text-2xl md:text-3xl">Ready to Simplify Pet Care?</CardTitle>
             <CardDescription className="text-blue-100">
               Join thousands of pet owners and professionals using PetTrack today.
             </CardDescription>
@@ -161,7 +165,7 @@ export function LandingPage() {
               </div>
               <Button
                 size="lg"
-                className="mt-auto bg-white text-blue-600 hover:bg-blue-50"
+                className="mt-auto bg-white text-blue-600 hover:bg-blue-50 whitespace-nowrap"
               >
                 Sign Up Free
               </Button>
@@ -171,47 +175,49 @@ export function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-white py-12">
-        <div className="container grid grid-cols-2 gap-8 md:grid-cols-4">
-          <div>
-            <h3 className="mb-4 font-semibold">Product</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Features</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Pricing</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">API</a></li>
-            </ul>
+      <footer className="border-t bg-white py-8 md:py-12">
+        <div className="container mx-auto max-w-7xl 2xl:max-w-[1800px] px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div>
+              <h3 className="mb-3 md:mb-4 text-sm md:text-base font-semibold">Product</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Features</a></li>
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Pricing</a></li>
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">API</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-3 md:mb-4 text-sm md:text-base font-semibold">Company</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">About</a></li>
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Careers</a></li>
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-3 md:mb-4 text-sm md:text-base font-semibold">Resources</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Blog</a></li>
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Help Center</a></li>
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Community</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-3 md:mb-4 text-sm md:text-base font-semibold">Legal</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Privacy</a></li>
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Terms</a></li>
+                <li><a href="#" className="text-sm md:text-base text-muted-foreground hover:text-foreground">Cookie Policy</a></li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h3 className="mb-4 font-semibold">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">About</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Careers</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Contact</a></li>
-            </ul>
+          <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2">
+              <PawPrintIcon className="h-6 w-6 text-blue-600" />
+              <span className="font-bold">PetTrack</span>
+            </div>
+            <p className="text-xs md:text-sm text-muted-foreground">© 2023 PetTrack. All rights reserved.</p>
           </div>
-          <div>
-            <h3 className="mb-4 font-semibold">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Blog</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Help Center</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Community</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="mb-4 font-semibold">Legal</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Privacy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Terms</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground">Cookie Policy</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="container mt-12 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <PawPrintIcon className="h-6 w-6 text-blue-600" />
-            <span className="font-bold">PetTrack</span>
-          </div>
-          <p className="text-sm text-muted-foreground">© 2023 PetTrack. All rights reserved.</p>
         </div>
       </footer>
     </div>
@@ -228,8 +234,8 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode, titl
         </div>
       </CardHeader>
       <CardContent>
-        <h3 className="mb-2 text-lg font-semibold">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
+        <h3 className="mb-2 text-base md:text-lg font-semibold">{title}</h3>
+        <p className="text-sm md:text-base text-muted-foreground">{description}</p>
       </CardContent>
     </Card>
   )
@@ -245,15 +251,15 @@ function TestimonialCard({ name, role, avatar, content }: {
   return (
     <Card>
       <CardContent className="pt-6">
-        <p className="mb-4 italic text-muted-foreground">"{content}"</p>
+        <p className="mb-4 text-sm md:text-base italic text-muted-foreground">"{content}"</p>
         <div className="flex items-center gap-4">
           <Avatar>
             <AvatarImage src={avatar} />
             <AvatarFallback>{name.charAt(0)}</AvatarFallback>
           </Avatar>
           <div>
-            <p className="font-medium">{name}</p>
-            <p className="text-sm text-muted-foreground">{role}</p>
+            <p className="text-sm md:text-base font-medium">{name}</p>
+            <p className="text-xs md:text-sm text-muted-foreground">{role}</p>
           </div>
         </div>
       </CardContent>

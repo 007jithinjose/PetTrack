@@ -125,7 +125,6 @@ export function DoctorRegisterForm({ onSuccess }: DoctorRegisterFormProps) {
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
     try {
-      // Remove confirmPassword without ESLint warning
       const { confirmPassword: _, ...submitData } = values;
 
       await authService.registerDoctor(submitData);
