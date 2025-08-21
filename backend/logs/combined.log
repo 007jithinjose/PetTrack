@@ -1,0 +1,846 @@
+2025-03-30T07:02:59.348Z [info]: Database connected successfully
+2025-03-30T07:02:59.350Z [info]: Server running on port 5000
+2025-03-30T07:02:59.350Z [info]: Docs available at http://localhost:5000/api/v1/docs
+2025-03-30T07:02:59.357Z [info]: Database connected successfully
+2025-03-30T07:03:23.031Z [info]: Database connected successfully
+2025-03-30T07:03:23.032Z [info]: Server running on port 5000
+2025-03-30T07:03:23.033Z [info]: Docs available at http://localhost:5000/api/v1/docs
+2025-03-30T07:03:23.039Z [info]: Database connected successfully
+2025-03-30T07:05:51.945Z [info]: Database connected successfully
+2025-03-30T07:05:51.947Z [info]: Server running on port 5000
+2025-03-30T07:05:51.947Z [info]: Docs available at http://localhost:5000/api/v1/docs
+2025-03-30T07:05:51.954Z [info]: Database connected successfully
+2025-03-30T07:06:01.776Z [info]: Database connected successfully
+2025-03-30T07:06:01.778Z [info]: Server running on port 5000
+2025-03-30T07:06:01.778Z [info]: Docs available at http://localhost:5000/api/v1/docs
+2025-03-30T07:06:01.785Z [info]: Database connected successfully
+2025-03-30T07:06:04.344Z [info]: Database connected successfully
+2025-03-30T07:06:04.346Z [info]: Server running on port 5000
+2025-03-30T07:06:04.346Z [info]: Docs available at http://localhost:5000/api/v1/docs
+2025-03-30T07:06:04.353Z [info]: Database connected successfully
+2025-03-30T07:06:09.550Z [info]: Database connected successfully
+2025-03-30T07:06:09.552Z [info]: Server running on port 5000
+2025-03-30T07:06:09.552Z [info]: Docs available at http://localhost:5000/api/v1/docs
+2025-03-30T07:06:09.559Z [info]: Database connected successfully
+2025-03-30T07:06:47.257Z [info]: Database connected successfully
+2025-03-30T07:06:47.259Z [info]: Server running on port 5000
+2025-03-30T07:06:47.259Z [info]: Docs available at http://localhost:5000/api/v1/docs
+2025-03-30T07:06:47.266Z [info]: Database connected successfully
+2025-03-30T07:06:50.131Z [info]: Database connected successfully
+2025-03-30T07:06:50.133Z [info]: Server running on port 5000
+2025-03-30T07:06:50.133Z [info]: Docs available at http://localhost:5000/api/v1/docs
+2025-03-30T07:06:50.140Z [info]: Database connected successfully
+2025-03-30T07:14:45.810Z [info]: Database connected successfully
+2025-03-30T07:14:45.812Z [info]: Server running on port 5000
+2025-03-30T07:14:45.819Z [info]: Database connected successfully
+2025-03-30T07:14:50.199Z [info]: Database connected successfully
+2025-03-30T07:14:50.200Z [info]: Server running on port 5000
+2025-03-30T07:14:50.208Z [info]: Database connected successfully
+2025-03-30T07:14:53.139Z [info]: Database connected successfully
+2025-03-30T07:14:53.141Z [info]: Server running on port 5000
+2025-03-30T07:14:53.148Z [info]: Database connected successfully
+2025-03-30T10:53:36.360Z [info]: Database connected successfully
+2025-03-30T10:53:36.362Z [info]: Server running on port 5000
+2025-03-30T10:53:36.370Z [info]: Database connected successfully
+2025-03-30T12:13:50.244Z [info]: Database connected successfully
+2025-03-30T12:13:50.246Z [info]: Server running on port 5000
+2025-03-30T12:13:50.253Z [info]: Database connected successfully
+2025-03-30T13:07:06.591Z [info]: Database connected successfully
+2025-03-30T13:07:06.593Z [info]: Server running on port 5000
+2025-03-30T13:07:06.600Z [info]: Database connected successfully
+2025-03-30T13:07:14.808Z [info]: Database connected successfully
+2025-03-30T13:07:14.811Z [info]: Server running on port 5000
+2025-03-30T13:07:14.820Z [info]: Database connected successfully
+2025-03-30T13:07:19.889Z [info]: Database connected successfully
+2025-03-30T13:07:19.891Z [info]: Server running on port 5000
+2025-03-30T13:07:19.898Z [info]: Database connected successfully
+2025-03-30T13:13:10.116Z [info]: Database connected successfully
+2025-03-30T13:13:10.118Z [info]: Server running on port 5000
+2025-03-30T13:13:10.126Z [info]: Database connected successfully
+2025-03-30T17:01:37.147Z [info]: Database connected successfully
+2025-03-30T17:01:37.149Z [info]: Server running on port 5000
+2025-03-30T17:02:07.055Z [error]: Database connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-03-30T18:49:22.753Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:49:22.755Z [info]: Server running on port 5000
+2025-03-30T18:49:22.762Z [info]: Mongoose connected to DB
+2025-03-30T18:49:22.763Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:51:08.638Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:51:08.640Z [info]: Server running on port 5000
+2025-03-30T18:51:08.646Z [info]: Mongoose connected to DB
+2025-03-30T18:51:08.647Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:57:03.091Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:57:03.093Z [info]: Server running on port 5000
+2025-03-30T18:57:03.099Z [info]: Mongoose connected to DB
+2025-03-30T18:57:03.100Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:57:10.573Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:57:10.575Z [info]: Server running on port 5000
+2025-03-30T18:57:10.582Z [info]: Mongoose connected to DB
+2025-03-30T18:57:10.582Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:57:16.716Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:57:16.718Z [info]: Server running on port 5000
+2025-03-30T18:57:16.724Z [info]: Mongoose connected to DB
+2025-03-30T18:57:16.725Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:57:19.289Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T18:57:19.291Z [info]: Server running on port 5000
+2025-03-30T18:57:19.297Z [info]: Mongoose connected to DB
+2025-03-30T18:57:19.298Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-30T19:02:13.459Z [error]: Unhandled error: doctor validation failed: hospital: Cast to ObjectId failed for value "Kims" (type string) at path "hospital" because of "BSONError"
+2025-03-31T01:46:47.380Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T01:46:47.382Z [info]: Server running on port 5000
+2025-03-31T01:46:52.282Z [warn]: Mongoose disconnected from DB
+2025-03-31T01:47:20.335Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T01:47:20.337Z [info]: Server running on port 5000
+2025-03-31T01:47:20.343Z [info]: Mongoose connected to DB
+2025-03-31T01:47:20.344Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:02:13.473Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:02:13.475Z [info]: Server running on port 5000
+2025-03-31T02:02:13.481Z [info]: Mongoose connected to DB
+2025-03-31T02:02:13.482Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:03:53.405Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:03:53.407Z [info]: Server running on port 5000
+2025-03-31T02:03:53.416Z [info]: Mongoose connected to DB
+2025-03-31T02:03:53.417Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:04:19.977Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:04:19.979Z [info]: Server running on port 5000
+2025-03-31T02:04:19.985Z [info]: Mongoose connected to DB
+2025-03-31T02:04:19.986Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:05:21.977Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:05:21.979Z [info]: Server running on port 5000
+2025-03-31T02:05:21.987Z [info]: Mongoose connected to DB
+2025-03-31T02:05:21.988Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:05:38.168Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:05:38.170Z [info]: Server running on port 5000
+2025-03-31T02:05:38.176Z [info]: Mongoose connected to DB
+2025-03-31T02:05:38.177Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:26:51.761Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:26:51.763Z [info]: Server running on port 5000
+2025-03-31T02:26:51.770Z [info]: Mongoose connected to DB
+2025-03-31T02:26:51.770Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:05.728Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:05.730Z [info]: Server running on port 5000
+2025-03-31T02:27:05.737Z [info]: Mongoose connected to DB
+2025-03-31T02:27:05.738Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:08.621Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:08.623Z [info]: Server running on port 5000
+2025-03-31T02:27:08.630Z [info]: Mongoose connected to DB
+2025-03-31T02:27:08.630Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:21.986Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:21.990Z [info]: Server running on port 5000
+2025-03-31T02:27:21.997Z [info]: Mongoose connected to DB
+2025-03-31T02:27:21.997Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:37.284Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:37.285Z [info]: Server running on port 5000
+2025-03-31T02:27:37.295Z [info]: Mongoose connected to DB
+2025-03-31T02:27:37.296Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:48.054Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:48.055Z [info]: Server running on port 5000
+2025-03-31T02:27:48.062Z [info]: Mongoose connected to DB
+2025-03-31T02:27:48.062Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:51.264Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:27:51.266Z [info]: Server running on port 5000
+2025-03-31T02:27:51.272Z [info]: Mongoose connected to DB
+2025-03-31T02:27:51.273Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:28:05.731Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:28:05.733Z [info]: Server running on port 5000
+2025-03-31T02:28:05.740Z [info]: Mongoose connected to DB
+2025-03-31T02:28:05.741Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:28:51.102Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:28:51.104Z [info]: Server running on port 5000
+2025-03-31T02:28:51.110Z [info]: Mongoose connected to DB
+2025-03-31T02:28:51.111Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:30:00.735Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:30:00.737Z [info]: Server running on port 5000
+2025-03-31T02:30:00.744Z [info]: Mongoose connected to DB
+2025-03-31T02:30:00.745Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:30:47.606Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:30:47.608Z [info]: Server running on port 5000
+2025-03-31T02:30:47.615Z [info]: Mongoose connected to DB
+2025-03-31T02:30:47.616Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:31:18.494Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T02:31:18.495Z [info]: Server running on port 5000
+2025-03-31T02:31:18.502Z [info]: Mongoose connected to DB
+2025-03-31T02:31:18.503Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T03:26:25.712Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T03:26:25.713Z [info]: Server running on port 5000
+2025-03-31T03:26:25.720Z [info]: Mongoose connected to DB
+2025-03-31T03:26:25.721Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T03:38:00.340Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T03:38:00.342Z [info]: Server running on port 5000
+2025-03-31T03:38:00.352Z [info]: Mongoose connected to DB
+2025-03-31T03:38:00.353Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T03:38:35.862Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T03:38:35.864Z [info]: Server running on port 5000
+2025-03-31T03:38:35.871Z [info]: Mongoose connected to DB
+2025-03-31T03:38:35.872Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T03:38:43.680Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T03:38:43.682Z [info]: Server running on port 5000
+2025-03-31T03:38:43.689Z [info]: Mongoose connected to DB
+2025-03-31T03:38:43.690Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T10:09:39.539Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T10:09:39.541Z [info]: Server running on port 5000
+2025-03-31T10:09:39.547Z [info]: Mongoose connected to DB
+2025-03-31T10:09:39.548Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T10:09:42.319Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T10:09:42.321Z [info]: Server running on port 5000
+2025-03-31T10:09:42.327Z [info]: Mongoose connected to DB
+2025-03-31T10:09:42.328Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T10:10:14.698Z [warn]: Mongoose disconnected from DB
+2025-03-31T10:10:20.081Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T10:10:20.083Z [info]: Server running on port 5000
+2025-03-31T10:10:20.089Z [info]: Mongoose connected to DB
+2025-03-31T10:10:20.090Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T10:18:03.644Z [warn]: Mongoose disconnected from DB
+2025-03-31T10:18:07.541Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T10:18:07.543Z [info]: Server running on port 5000
+2025-03-31T10:18:07.550Z [info]: Mongoose connected to DB
+2025-03-31T10:18:07.551Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:38:43.331Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:38:43.333Z [info]: Server running on port 5000
+2025-03-31T17:38:43.340Z [info]: Mongoose connected to DB
+2025-03-31T17:38:43.341Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:39:38.350Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:39:38.352Z [info]: Server running on port 5000
+2025-03-31T17:39:38.358Z [info]: Mongoose connected to DB
+2025-03-31T17:39:38.359Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:47:15.486Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:47:15.488Z [info]: Server running on port 5000
+2025-03-31T17:47:15.494Z [info]: Mongoose connected to DB
+2025-03-31T17:47:15.495Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:47:36.252Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:47:36.254Z [info]: Server running on port 5000
+2025-03-31T17:47:36.262Z [info]: Mongoose connected to DB
+2025-03-31T17:47:36.263Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:47:40.695Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:47:40.698Z [info]: Server running on port 5000
+2025-03-31T17:47:40.704Z [info]: Mongoose connected to DB
+2025-03-31T17:47:40.705Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:48:22.029Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:48:22.031Z [info]: Server running on port 5000
+2025-03-31T17:48:22.038Z [info]: Mongoose connected to DB
+2025-03-31T17:48:22.038Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:48:47.093Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:48:47.095Z [info]: Server running on port 5000
+2025-03-31T17:48:47.101Z [info]: Mongoose connected to DB
+2025-03-31T17:48:47.102Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:49:03.564Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:49:03.566Z [info]: Server running on port 5000
+2025-03-31T17:49:03.572Z [info]: Mongoose connected to DB
+2025-03-31T17:49:03.573Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:50:18.482Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:50:18.484Z [info]: Server running on port 5000
+2025-03-31T17:50:18.490Z [info]: Mongoose connected to DB
+2025-03-31T17:50:18.491Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:50:30.243Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:50:30.245Z [info]: Server running on port 5000
+2025-03-31T17:50:30.252Z [info]: Mongoose connected to DB
+2025-03-31T17:50:30.253Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:50:56.627Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:50:56.629Z [info]: Server running on port 5000
+2025-03-31T17:50:56.635Z [info]: Mongoose connected to DB
+2025-03-31T17:50:56.636Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:02.340Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:02.342Z [info]: Server running on port 5000
+2025-03-31T17:51:02.348Z [info]: Mongoose connected to DB
+2025-03-31T17:51:02.349Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:08.345Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:08.347Z [info]: Server running on port 5000
+2025-03-31T17:51:08.354Z [info]: Mongoose connected to DB
+2025-03-31T17:51:08.354Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:13.555Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:13.557Z [info]: Server running on port 5000
+2025-03-31T17:51:13.564Z [info]: Mongoose connected to DB
+2025-03-31T17:51:13.565Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:16.069Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:16.071Z [info]: Server running on port 5000
+2025-03-31T17:51:16.077Z [info]: Mongoose connected to DB
+2025-03-31T17:51:16.078Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:30.449Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:30.451Z [info]: Server running on port 5000
+2025-03-31T17:51:30.458Z [info]: Mongoose connected to DB
+2025-03-31T17:51:30.459Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:40.679Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:40.682Z [info]: Server running on port 5000
+2025-03-31T17:51:40.688Z [info]: Mongoose connected to DB
+2025-03-31T17:51:40.689Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:59.660Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:51:59.662Z [info]: Server running on port 5000
+2025-03-31T17:51:59.668Z [info]: Mongoose connected to DB
+2025-03-31T17:51:59.669Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:52:48.676Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:52:48.678Z [info]: Server running on port 5000
+2025-03-31T17:52:48.685Z [info]: Mongoose connected to DB
+2025-03-31T17:52:48.685Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:52:56.134Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:52:56.137Z [info]: Server running on port 5000
+2025-03-31T17:52:56.143Z [info]: Mongoose connected to DB
+2025-03-31T17:52:56.144Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:02.611Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:02.613Z [info]: Server running on port 5000
+2025-03-31T17:53:02.620Z [info]: Mongoose connected to DB
+2025-03-31T17:53:02.621Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:08.439Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:08.441Z [info]: Server running on port 5000
+2025-03-31T17:53:08.447Z [info]: Mongoose connected to DB
+2025-03-31T17:53:08.448Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:33.871Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:33.873Z [info]: Server running on port 5000
+2025-03-31T17:53:33.879Z [info]: Mongoose connected to DB
+2025-03-31T17:53:33.880Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:40.768Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:40.771Z [info]: Server running on port 5000
+2025-03-31T17:53:40.778Z [info]: Mongoose connected to DB
+2025-03-31T17:53:40.778Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:44.240Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T17:53:44.242Z [info]: Server running on port 5000
+2025-03-31T17:53:44.249Z [info]: Mongoose connected to DB
+2025-03-31T17:53:44.250Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:04:45.827Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:04:45.829Z [info]: Server running on port 5000
+2025-03-31T20:04:45.835Z [info]: Mongoose connected to DB
+2025-03-31T20:04:45.836Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:04:57.507Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:04:57.509Z [info]: Server running on port 5000
+2025-03-31T20:04:57.516Z [info]: Mongoose connected to DB
+2025-03-31T20:04:57.517Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:05:29.033Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:05:29.035Z [info]: Server running on port 5000
+2025-03-31T20:05:29.041Z [info]: Mongoose connected to DB
+2025-03-31T20:05:29.042Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:11:04.770Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:11:04.772Z [info]: Server running on port 5000
+2025-03-31T20:11:04.778Z [info]: Mongoose connected to DB
+2025-03-31T20:11:04.779Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:14:54.825Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T20:14:54.827Z [info]: Server running on port 5000
+2025-03-31T20:14:54.833Z [info]: Mongoose connected to DB
+2025-03-31T20:14:54.834Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T22:08:22.579Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T22:08:22.580Z [info]: Server running on port 5000
+2025-03-31T22:08:22.588Z [info]: Mongoose connected to DB
+2025-03-31T22:08:22.589Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T22:09:32.206Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T22:09:32.208Z [info]: Server running on port 5000
+2025-03-31T22:09:32.216Z [info]: Mongoose connected to DB
+2025-03-31T22:09:32.217Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T22:09:49.276Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T22:09:49.277Z [info]: Server running on port 5000
+2025-03-31T22:09:49.286Z [info]: Mongoose connected to DB
+2025-03-31T22:09:49.286Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T22:10:01.900Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-03-31T22:10:01.902Z [info]: Server running on port 5000
+2025-03-31T22:10:01.910Z [info]: Mongoose connected to DB
+2025-03-31T22:10:01.911Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:28:17.475Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:28:17.477Z [info]: Server running on port 5000
+2025-04-01T04:28:22.475Z [warn]: Mongoose disconnected from DB
+2025-04-01T04:31:35.392Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:31:35.394Z [info]: Server running on port 5000
+2025-04-01T04:31:35.404Z [info]: Mongoose connected to DB
+2025-04-01T04:31:35.405Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:47:27.838Z [warn]: Mongoose disconnected from DB
+2025-04-01T04:49:25.614Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:49:25.616Z [info]: Server running on port 5000
+2025-04-01T04:49:25.624Z [info]: Mongoose connected to DB
+2025-04-01T04:49:25.625Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:49:34.486Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:49:35.178Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:49:36.202Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:49:38.213Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:51:01.542Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:51:02.561Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:51:04.572Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:54:13.826Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:54:13.828Z [info]: Server running on port 5000
+2025-04-01T04:54:13.837Z [info]: Mongoose connected to DB
+2025-04-01T04:54:13.838Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:54:17.347Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:54:17.348Z [info]: Server running on port 5000
+2025-04-01T04:54:17.357Z [info]: Mongoose connected to DB
+2025-04-01T04:54:17.358Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:54:47.176Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T04:54:48.189Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T04:54:50.200Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T04:58:59.414Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:58:59.415Z [info]: Server running on port 5000
+2025-04-01T04:58:59.423Z [info]: Mongoose connected to DB
+2025-04-01T04:58:59.424Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:59:05.882Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:59:05.884Z [info]: Server running on port 5000
+2025-04-01T04:59:05.892Z [info]: Mongoose connected to DB
+2025-04-01T04:59:05.893Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:59:10.283Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:59:10.284Z [info]: Server running on port 5000
+2025-04-01T04:59:10.293Z [info]: Mongoose connected to DB
+2025-04-01T04:59:10.294Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:59:18.556Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:59:18.558Z [info]: Server running on port 5000
+2025-04-01T04:59:18.565Z [info]: Mongoose connected to DB
+2025-04-01T04:59:18.566Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:59:22.177Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T04:59:22.178Z [info]: Server running on port 5000
+2025-04-01T04:59:22.186Z [info]: Mongoose connected to DB
+2025-04-01T04:59:22.187Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:00:27.410Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:00:27.411Z [info]: Server running on port 5000
+2025-04-01T05:00:27.420Z [info]: Mongoose connected to DB
+2025-04-01T05:00:27.421Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:00:36.337Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:00:36.338Z [info]: Server running on port 5000
+2025-04-01T05:00:36.344Z [info]: Mongoose connected to DB
+2025-04-01T05:00:36.345Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:03:39.377Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:03:39.378Z [info]: Server running on port 5000
+2025-04-01T05:03:39.386Z [info]: Mongoose connected to DB
+2025-04-01T05:03:39.387Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:03:46.561Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T05:03:47.578Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T05:03:49.592Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T05:07:10.179Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:07:10.180Z [info]: Server running on port 5000
+2025-04-01T05:07:10.186Z [info]: Mongoose connected to DB
+2025-04-01T05:07:10.187Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:07:41.196Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:07:41.197Z [info]: Server running on port 5000
+2025-04-01T05:07:41.203Z [info]: Mongoose connected to DB
+2025-04-01T05:07:41.204Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:10:08.198Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:10:08.200Z [info]: Server running on port 5000
+2025-04-01T05:10:08.206Z [info]: Mongoose connected to DB
+2025-04-01T05:10:08.207Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:29:07.321Z [warn]: Mongoose disconnected from DB
+2025-04-01T05:29:11.286Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T05:29:11.288Z [info]: Server running on port 5000
+2025-04-01T05:29:11.295Z [info]: Mongoose connected to DB
+2025-04-01T05:29:11.296Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T06:36:59.611Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T06:36:59.613Z [info]: Server running on port 5000
+2025-04-01T06:36:59.619Z [info]: Mongoose connected to DB
+2025-04-01T06:36:59.620Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T08:55:02.021Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T08:55:02.023Z [info]: Server running on port 5000
+2025-04-01T08:55:02.029Z [info]: Mongoose connected to DB
+2025-04-01T08:55:02.029Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T16:27:42.847Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T16:27:42.849Z [info]: Server running on port 5000
+2025-04-01T16:27:42.855Z [info]: Mongoose connected to DB
+2025-04-01T16:27:42.856Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:02:34.351Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:02:34.352Z [info]: Server running on port 5000
+2025-04-01T17:02:34.359Z [info]: Mongoose connected to DB
+2025-04-01T17:02:34.360Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:06:54.342Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:06:54.344Z [info]: Server running on port 5000
+2025-04-01T17:06:54.350Z [info]: Mongoose connected to DB
+2025-04-01T17:06:54.351Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:06:59.454Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:06:59.455Z [info]: Server running on port 5000
+2025-04-01T17:06:59.464Z [info]: Mongoose connected to DB
+2025-04-01T17:06:59.465Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:07:05.798Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:07:05.800Z [info]: Server running on port 5000
+2025-04-01T17:07:05.806Z [info]: Mongoose connected to DB
+2025-04-01T17:07:05.807Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:07:12.903Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:07:12.905Z [info]: Server running on port 5000
+2025-04-01T17:07:12.911Z [info]: Mongoose connected to DB
+2025-04-01T17:07:12.912Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-01T17:16:29.622Z [error]: Authentication error: Unauthorized access
+2025-04-01T17:16:50.044Z [error]: Authentication error: Unauthorized access
+2025-04-03T04:37:22.808Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-03T04:37:22.809Z [info]: Server running on port 5000
+2025-04-03T04:37:27.808Z [warn]: Mongoose disconnected from DB
+2025-04-03T04:37:41.536Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-03T04:37:41.538Z [info]: Server running on port 5000
+2025-04-03T04:37:41.544Z [info]: Mongoose connected to DB
+2025-04-03T04:37:41.545Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-03T04:44:30.472Z [error]: JWT verification failed: jwt expired
+2025-04-03T04:44:30.473Z [error]: Authentication error: Invalid token
+2025-04-03T05:51:35.134Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-03T05:51:35.136Z [info]: Server running on port 5000
+2025-04-03T05:51:35.142Z [info]: Mongoose connected to DB
+2025-04-03T05:51:35.143Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-03T06:22:38.344Z [error]: Authentication error: Authentication required
+2025-04-05T03:07:39.311Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:07:39.312Z [info]: Server running on port 5000
+2025-04-05T03:07:39.318Z [info]: Mongoose connected to DB
+2025-04-05T03:07:39.319Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:08:54.791Z [error]: JWT verification failed: jwt expired
+2025-04-05T03:08:54.791Z [error]: Authentication error: Invalid token
+2025-04-05T03:32:16.387Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:32:16.389Z [info]: Server running on port 5000
+2025-04-05T03:32:16.395Z [info]: Mongoose connected to DB
+2025-04-05T03:32:16.396Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:44:30.963Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:44:30.965Z [info]: Server running on port 5000
+2025-04-05T03:44:30.971Z [info]: Mongoose connected to DB
+2025-04-05T03:44:30.972Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:48:31.412Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:48:31.414Z [info]: Server running on port 5000
+2025-04-05T03:48:31.421Z [info]: Mongoose connected to DB
+2025-04-05T03:48:31.422Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:49:48.904Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:49:48.905Z [info]: Server running on port 5000
+2025-04-05T03:49:48.912Z [info]: Mongoose connected to DB
+2025-04-05T03:49:48.913Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:50:17.776Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:50:17.778Z [info]: Server running on port 5000
+2025-04-05T03:50:17.784Z [info]: Mongoose connected to DB
+2025-04-05T03:50:17.785Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:50:33.670Z [warn]: Mongoose disconnected from DB
+2025-04-05T03:50:39.948Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:50:39.950Z [info]: Server running on port 5000
+2025-04-05T03:50:39.958Z [info]: Mongoose connected to DB
+2025-04-05T03:50:39.959Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:52:39.003Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T03:52:39.005Z [info]: Server running on port 5000
+2025-04-05T03:52:39.013Z [info]: Mongoose connected to DB
+2025-04-05T03:52:39.014Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T04:13:25.475Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T04:13:25.476Z [info]: Server running on port 5000
+2025-04-05T04:13:25.482Z [info]: Mongoose connected to DB
+2025-04-05T04:13:25.483Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T04:27:11.295Z [warn]: Mongoose disconnected from DB
+2025-04-05T04:27:17.153Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-05T04:27:17.155Z [info]: Server running on port 5000
+2025-04-05T04:27:17.161Z [info]: Mongoose connected to DB
+2025-04-05T04:27:17.162Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T01:20:10.073Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T01:20:10.075Z [info]: Server running on port 5000
+2025-04-06T01:20:15.072Z [warn]: Mongoose disconnected from DB
+2025-04-06T01:20:38.183Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T01:20:38.185Z [info]: Server running on port 5000
+2025-04-06T01:20:38.193Z [info]: Mongoose connected to DB
+2025-04-06T01:20:38.194Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T05:30:15.499Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T05:30:15.501Z [info]: Server running on port 5000
+2025-04-06T05:30:15.509Z [info]: Mongoose connected to DB
+2025-04-06T05:30:15.510Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T05:31:11.118Z [error]: JWT verification failed: jwt expired
+2025-04-06T05:31:11.118Z [error]: Authentication error: Invalid token
+2025-04-06T05:31:11.122Z [error]: JWT verification failed: jwt expired
+2025-04-06T05:31:11.122Z [error]: Authentication error: Invalid token
+2025-04-06T05:31:11.125Z [error]: JWT verification failed: jwt expired
+2025-04-06T05:31:11.125Z [error]: Authentication error: Invalid token
+2025-04-06T05:52:44.903Z [error]: Authentication error: Authentication required
+2025-04-06T05:52:53.139Z [error]: JWT verification failed: jwt expired
+2025-04-06T05:52:53.139Z [error]: Authentication error: Invalid token
+2025-04-06T06:54:52.115Z [warn]: Mongoose disconnected from DB
+2025-04-06T06:54:59.422Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T06:54:59.423Z [info]: Server running on port 5000
+2025-04-06T06:54:59.432Z [info]: Mongoose connected to DB
+2025-04-06T06:54:59.433Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T07:13:06.451Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T07:13:06.453Z [info]: Server running on port 5000
+2025-04-06T07:13:06.460Z [info]: Mongoose connected to DB
+2025-04-06T07:13:06.461Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:14:15.112Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:14:15.113Z [info]: Server running on port 5000
+2025-04-06T08:14:15.122Z [info]: Mongoose connected to DB
+2025-04-06T08:14:15.123Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:18:20.847Z [warn]: Mongoose disconnected from DB
+2025-04-06T08:18:40.477Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:18:40.478Z [info]: Server running on port 5000
+2025-04-06T08:18:40.488Z [info]: Mongoose connected to DB
+2025-04-06T08:18:40.489Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:20:14.715Z [warn]: Mongoose disconnected from DB
+2025-04-06T08:20:19.357Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:20:19.359Z [info]: Server running on port 5000
+2025-04-06T08:20:19.365Z [info]: Mongoose connected to DB
+2025-04-06T08:20:19.366Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:24:34.489Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:24:34.490Z [info]: Server running on port 5000
+2025-04-06T08:24:34.498Z [info]: Mongoose connected to DB
+2025-04-06T08:24:34.499Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:38:22.452Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T08:38:22.454Z [info]: Server running on port 5000
+2025-04-06T08:38:22.462Z [info]: Mongoose connected to DB
+2025-04-06T08:38:22.463Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T15:15:03.378Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T15:15:03.380Z [info]: Server running on port 5000
+2025-04-06T15:15:03.388Z [info]: Mongoose connected to DB
+2025-04-06T15:15:03.389Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T16:29:45.490Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T16:29:45.492Z [info]: Server running on port 5000
+2025-04-06T16:29:45.500Z [info]: Mongoose connected to DB
+2025-04-06T16:29:45.501Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T16:30:45.200Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T16:30:45.202Z [info]: Server running on port 5000
+2025-04-06T16:30:45.208Z [info]: Mongoose connected to DB
+2025-04-06T16:30:45.209Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T16:48:21.274Z [error]: Authentication error: Unauthorized access
+2025-04-06T16:51:01.709Z [error]: Authentication error: Unauthorized access
+2025-04-06T16:55:16.723Z [error]: Authentication error: Unauthorized access
+2025-04-06T17:08:11.291Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:08:19.156Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:29.396Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:31.417Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:34.359Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:35.236Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:36.249Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:38.368Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:39.379Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:14:03.618Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:14:04.636Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:07.084Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:08.094Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:10.104Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:14.433Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:14.940Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:15.949Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:16.961Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:17.974Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:19.992Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:23:37.925Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:23:37.927Z [info]: Server running on port 5000
+2025-04-06T17:23:37.933Z [info]: Mongoose connected to DB
+2025-04-06T17:23:37.934Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:23:45.873Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:23:45.875Z [info]: Server running on port 5000
+2025-04-06T17:23:45.882Z [info]: Mongoose connected to DB
+2025-04-06T17:23:45.882Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:24:15.150Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:24:15.152Z [info]: Server running on port 5000
+2025-04-06T17:24:15.159Z [info]: Mongoose connected to DB
+2025-04-06T17:24:15.160Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:24:28.213Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:24:28.215Z [info]: Server running on port 5000
+2025-04-06T17:24:28.221Z [info]: Mongoose connected to DB
+2025-04-06T17:24:28.222Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:25:34.139Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:25:34.141Z [info]: Server running on port 5000
+2025-04-06T17:25:34.149Z [info]: Mongoose connected to DB
+2025-04-06T17:25:34.150Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:25:51.240Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:25:51.241Z [info]: Server running on port 5000
+2025-04-06T17:25:51.248Z [info]: Mongoose connected to DB
+2025-04-06T17:25:51.249Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:26:09.936Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:26:09.938Z [info]: Server running on port 5000
+2025-04-06T17:26:09.944Z [info]: Mongoose connected to DB
+2025-04-06T17:26:09.945Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:26:28.030Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:26:28.031Z [info]: Server running on port 5000
+2025-04-06T17:26:28.038Z [info]: Mongoose connected to DB
+2025-04-06T17:26:28.039Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:26:53.312Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:26:53.314Z [info]: Server running on port 5000
+2025-04-06T17:26:53.320Z [info]: Mongoose connected to DB
+2025-04-06T17:26:53.321Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:26:57.289Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:26:57.290Z [info]: Server running on port 5000
+2025-04-06T17:26:57.296Z [info]: Mongoose connected to DB
+2025-04-06T17:26:57.297Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:27:02.903Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:27:02.905Z [info]: Server running on port 5000
+2025-04-06T17:27:02.911Z [info]: Mongoose connected to DB
+2025-04-06T17:27:02.912Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:27:08.809Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:27:08.811Z [info]: Server running on port 5000
+2025-04-06T17:27:08.817Z [info]: Mongoose connected to DB
+2025-04-06T17:27:08.818Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:27:37.336Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:27:37.338Z [info]: Server running on port 5000
+2025-04-06T17:27:37.345Z [info]: Mongoose connected to DB
+2025-04-06T17:27:37.345Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:28:18.523Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:28:18.525Z [info]: Server running on port 5000
+2025-04-06T17:28:18.533Z [info]: Mongoose connected to DB
+2025-04-06T17:28:18.534Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:28:47.201Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:28:47.202Z [info]: Server running on port 5000
+2025-04-06T17:28:47.212Z [info]: Mongoose connected to DB
+2025-04-06T17:28:47.213Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:29:56.908Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:29:56.910Z [info]: Server running on port 5000
+2025-04-06T17:29:56.916Z [info]: Mongoose connected to DB
+2025-04-06T17:29:56.917Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T17:41:48.971Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T19:29:30.888Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T19:29:30.890Z [info]: Server running on port 5000
+2025-04-06T19:29:30.897Z [info]: Mongoose connected to DB
+2025-04-06T19:29:30.898Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T19:29:35.641Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T19:29:35.642Z [info]: Server running on port 5000
+2025-04-06T19:29:35.649Z [info]: Mongoose connected to DB
+2025-04-06T19:29:35.650Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:53:44.088Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:53:44.089Z [info]: Server running on port 5000
+2025-04-06T20:53:44.096Z [info]: Mongoose connected to DB
+2025-04-06T20:53:44.096Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:53:52.350Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:53:52.351Z [info]: Server running on port 5000
+2025-04-06T20:53:52.357Z [info]: Mongoose connected to DB
+2025-04-06T20:53:52.358Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:53:58.965Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:53:58.967Z [info]: Server running on port 5000
+2025-04-06T20:53:58.973Z [info]: Mongoose connected to DB
+2025-04-06T20:53:58.974Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:54:26.474Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:54:26.476Z [info]: Server running on port 5000
+2025-04-06T20:54:26.482Z [info]: Mongoose connected to DB
+2025-04-06T20:54:26.483Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:54:41.636Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T20:54:41.637Z [info]: Server running on port 5000
+2025-04-06T20:54:41.643Z [info]: Mongoose connected to DB
+2025-04-06T20:54:41.644Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T21:44:11.791Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-06T21:44:11.793Z [info]: Server running on port 5000
+2025-04-06T21:44:11.801Z [info]: Mongoose connected to DB
+2025-04-06T21:44:11.801Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T03:58:16.354Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T03:58:16.356Z [info]: Server running on port 5000
+2025-04-07T03:58:16.364Z [info]: Mongoose connected to DB
+2025-04-07T03:58:16.365Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T04:21:30.394Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T04:21:30.396Z [info]: Server running on port 5000
+2025-04-07T04:21:30.404Z [info]: Mongoose connected to DB
+2025-04-07T04:21:30.405Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T04:21:45.079Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T04:21:45.081Z [info]: Server running on port 5000
+2025-04-07T04:21:45.087Z [info]: Mongoose connected to DB
+2025-04-07T04:21:45.088Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T07:52:54.507Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T07:52:54.509Z [info]: Server running on port 5000
+2025-04-07T07:52:54.515Z [info]: Mongoose connected to DB
+2025-04-07T07:52:54.515Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T11:56:34.139Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T11:56:34.140Z [info]: Server running on port 5000
+2025-04-07T11:56:34.147Z [info]: Mongoose connected to DB
+2025-04-07T11:56:34.147Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T11:56:47.104Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T11:56:47.106Z [info]: Server running on port 5000
+2025-04-07T11:56:47.112Z [info]: Mongoose connected to DB
+2025-04-07T11:56:47.113Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T11:56:52.063Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T11:56:52.065Z [info]: Server running on port 5000
+2025-04-07T11:56:52.072Z [info]: Mongoose connected to DB
+2025-04-07T11:56:52.072Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T11:56:59.066Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T11:56:59.067Z [info]: Server running on port 5000
+2025-04-07T11:56:59.074Z [info]: Mongoose connected to DB
+2025-04-07T11:56:59.075Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T17:22:53.258Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T17:22:53.259Z [info]: Server running on port 5000
+2025-04-07T17:22:53.267Z [info]: Mongoose connected to DB
+2025-04-07T17:22:53.268Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T18:30:44.163Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T18:31:20.678Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T18:38:16.517Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T18:59:38.934Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T19:06:05.870Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T19:06:39.882Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T19:07:47.447Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T19:14:08.544Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T19:14:08.546Z [info]: Server running on port 5000
+2025-04-07T19:14:08.552Z [info]: Mongoose connected to DB
+2025-04-07T19:14:08.553Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T19:15:29.507Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T19:15:29.508Z [info]: Server running on port 5000
+2025-04-07T19:15:29.515Z [info]: Mongoose connected to DB
+2025-04-07T19:15:29.515Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T19:15:51.948Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T19:15:51.950Z [info]: Server running on port 5000
+2025-04-07T19:15:51.956Z [info]: Mongoose connected to DB
+2025-04-07T19:15:51.957Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T19:17:57.193Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T19:17:57.195Z [info]: Server running on port 5000
+2025-04-07T19:17:57.202Z [info]: Mongoose connected to DB
+2025-04-07T19:17:57.203Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:02:14.794Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:18:59.606Z [error]: JWT verification failed: jwt expired
+2025-04-07T20:18:59.606Z [error]: Authentication error: Invalid token
+2025-04-07T20:19:22.537Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:29:36.285Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:29:36.287Z [info]: Server running on port 5000
+2025-04-07T20:29:36.293Z [info]: Mongoose connected to DB
+2025-04-07T20:29:36.294Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:30:12.064Z [warn]: Mongoose disconnected from DB
+2025-04-07T20:30:17.455Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:30:17.457Z [info]: Server running on port 5000
+2025-04-07T20:30:17.463Z [info]: Mongoose connected to DB
+2025-04-07T20:30:17.464Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:32:40.175Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:32:40.177Z [info]: Server running on port 5000
+2025-04-07T20:32:40.183Z [info]: Mongoose connected to DB
+2025-04-07T20:32:40.184Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:32:49.998Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:32:51.496Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:33:21.482Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:33:59.036Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:34:01.439Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:34:05.648Z [error]: Unhandled error: Expected double-quoted property name in JSON at position 296 (line 9 column 1)
+2025-04-07T20:34:14.200Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:34:23.033Z [error]: Unhandled error: Expected double-quoted property name in JSON at position 265 (line 9 column 1)
+2025-04-07T20:41:03.085Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:41:03.086Z [info]: Server running on port 5000
+2025-04-07T20:41:03.092Z [info]: Mongoose connected to DB
+2025-04-07T20:41:03.093Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:41:28.848Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-07T20:41:28.850Z [info]: Server running on port 5000
+2025-04-07T20:41:28.857Z [info]: Mongoose connected to DB
+2025-04-07T20:41:28.857Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-08T02:46:16.617Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-08T02:46:16.618Z [info]: Server running on port 5000
+2025-04-08T02:46:16.627Z [info]: Mongoose connected to DB
+2025-04-08T02:46:16.628Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-08T02:57:45.028Z [error]: JWT verification failed: jwt expired
+2025-04-08T02:57:45.029Z [error]: Authentication error: Invalid token
+2025-04-08T03:29:56.880Z [error]: JWT verification failed: jwt expired
+2025-04-08T03:29:56.881Z [error]: Authentication error: Invalid token
+2025-04-08T16:38:10.635Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-04-08T16:38:10.637Z [info]: Server running on port 5000
+2025-04-08T16:38:10.643Z [info]: Mongoose connected to DB
+2025-04-08T16:38:10.644Z [info]: Database connected successfully to mongodb://127.0.0.1:27017/pettrack
+2025-08-21T15:55:24.565Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T15:55:24.566Z [info]: Server running on port 5000
+2025-08-21T15:55:24.585Z [info]: Mongoose connected to DB
+2025-08-21T15:55:24.587Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:04:30.345Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:04:30.348Z [info]: Server running on port 5000
+2025-08-21T16:04:30.370Z [info]: Mongoose connected to DB
+2025-08-21T16:04:30.371Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:04:35.742Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:04:35.744Z [info]: Server running on port 5000
+2025-08-21T16:04:35.764Z [info]: Mongoose connected to DB
+2025-08-21T16:04:35.766Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:04:45.450Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:04:45.452Z [info]: Server running on port 5000
+2025-08-21T16:04:45.472Z [info]: Mongoose connected to DB
+2025-08-21T16:04:45.474Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:05:11.975Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:05:11.977Z [info]: Server running on port 5000
+2025-08-21T16:05:11.996Z [info]: Mongoose connected to DB
+2025-08-21T16:05:11.997Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:05:18.659Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:05:18.661Z [info]: Server running on port 5000
+2025-08-21T16:05:18.680Z [info]: Mongoose connected to DB
+2025-08-21T16:05:18.681Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:05:22.887Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:05:22.888Z [info]: Server running on port 5000
+2025-08-21T16:05:22.906Z [info]: Mongoose connected to DB
+2025-08-21T16:05:22.907Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:05:52.530Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:05:52.531Z [info]: Server running on port 5000
+2025-08-21T16:05:52.548Z [info]: Mongoose connected to DB
+2025-08-21T16:05:52.549Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:29:32.552Z [info]: Running all seeders...
+2025-08-21T16:29:32.553Z [info]: Running hospitals seeder...
+2025-08-21T16:29:32.584Z [info]: Connected to MongoDB for seeding
+2025-08-21T16:29:32.597Z [info]: Cleared existing hospitals
+2025-08-21T16:29:32.609Z [info]: Seeded 5 hospitals successfully
+2025-08-21T16:29:38.644Z [info]: Running all seeders...
+2025-08-21T16:29:38.645Z [info]: Running hospitals seeder...
+2025-08-21T16:29:38.679Z [info]: Connected to MongoDB for seeding
+2025-08-21T16:29:38.693Z [info]: Cleared existing hospitals
+2025-08-21T16:29:38.705Z [info]: Seeded 5 hospitals successfully
+2025-08-21T16:29:38.706Z [info]: - Paws & Claws Animal Hospital (info@pawsandclaws.com)
+2025-08-21T16:29:38.706Z [info]: - Urban Veterinary Center (contact@urbanvet.com)
+2025-08-21T16:29:38.706Z [info]: - Countryside Animal Clinic (hello@countrysideclinic.com)
+2025-08-21T16:29:38.706Z [info]: - Oceanview Pet Hospital (support@oceanviewpets.com)
+2025-08-21T16:29:38.706Z [info]: - Mountain Peak Veterinary (care@mountainpeakvet.com)
+2025-08-21T16:29:38.710Z [info]: Database connection closed
+2025-08-21T16:29:41.774Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:29:41.775Z [info]: Server running on port 5000
+2025-08-21T16:29:41.793Z [info]: Mongoose connected to DB
+2025-08-21T16:29:41.794Z [info]: Database connected successfully to mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+2025-08-21T16:30:40.891Z [error]: Authentication error: Unauthorized access

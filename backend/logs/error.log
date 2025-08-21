@@ -1,0 +1,83 @@
+2025-03-30T17:02:07.055Z [error]: Database connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-03-30T19:02:13.459Z [error]: Unhandled error: doctor validation failed: hospital: Cast to ObjectId failed for value "Kims" (type string) at path "hospital" because of "BSONError"
+2025-03-31T01:46:52.284Z [error]: Database connection error: connect ECONNREFUSED 127.0.0.1:27017
+2025-04-01T04:28:22.476Z [error]: Database connection error: connect ECONNREFUSED 127.0.0.1:27017
+2025-04-01T04:49:34.486Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:49:35.178Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:49:36.202Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:49:38.213Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:51:01.542Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:51:02.561Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:51:04.572Z [error]: Unhandled error: Cannot read properties of undefined (reading 'role')
+2025-04-01T04:54:47.176Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T04:54:48.189Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T04:54:50.200Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T05:03:46.561Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T05:03:47.578Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T05:03:49.592Z [error]: Unhandled error: Cast to ObjectId failed for value "hospital-id-here" (type string) at path "_id" for model "Hospital"
+2025-04-01T17:16:29.622Z [error]: Authentication error: Unauthorized access
+2025-04-01T17:16:50.044Z [error]: Authentication error: Unauthorized access
+2025-04-03T04:37:27.812Z [error]: Database connection error: connect ECONNREFUSED 127.0.0.1:27017
+2025-04-03T04:44:30.472Z [error]: JWT verification failed: jwt expired
+2025-04-03T04:44:30.473Z [error]: Authentication error: Invalid token
+2025-04-03T06:22:38.344Z [error]: Authentication error: Authentication required
+2025-04-05T03:08:54.791Z [error]: JWT verification failed: jwt expired
+2025-04-05T03:08:54.791Z [error]: Authentication error: Invalid token
+2025-04-06T01:20:15.077Z [error]: Database connection error: connect ECONNREFUSED 127.0.0.1:27017
+2025-04-06T05:31:11.118Z [error]: JWT verification failed: jwt expired
+2025-04-06T05:31:11.118Z [error]: Authentication error: Invalid token
+2025-04-06T05:31:11.122Z [error]: JWT verification failed: jwt expired
+2025-04-06T05:31:11.122Z [error]: Authentication error: Invalid token
+2025-04-06T05:31:11.125Z [error]: JWT verification failed: jwt expired
+2025-04-06T05:31:11.125Z [error]: Authentication error: Invalid token
+2025-04-06T05:52:44.903Z [error]: Authentication error: Authentication required
+2025-04-06T05:52:53.139Z [error]: JWT verification failed: jwt expired
+2025-04-06T05:52:53.139Z [error]: Authentication error: Invalid token
+2025-04-06T16:48:21.274Z [error]: Authentication error: Unauthorized access
+2025-04-06T16:51:01.709Z [error]: Authentication error: Unauthorized access
+2025-04-06T16:55:16.723Z [error]: Authentication error: Unauthorized access
+2025-04-06T17:08:11.291Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:08:19.156Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:29.396Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:31.417Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:34.359Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:35.236Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:36.249Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:38.368Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:13:39.379Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:14:03.618Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:14:04.636Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:07.084Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:08.094Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:10.104Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:14.433Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:14.940Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:15.949Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:16.961Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:17.974Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:15:19.992Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-06T17:41:48.971Z [error]: Unhandled error: Cast to ObjectId failed for value "doctor" (type string) at path "_id" for model "Appointment"
+2025-04-07T18:30:44.163Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T18:31:20.678Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T18:38:16.517Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T18:59:38.934Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T19:06:05.870Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T19:06:39.882Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T19:07:47.447Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:02:14.794Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:18:59.606Z [error]: JWT verification failed: jwt expired
+2025-04-07T20:18:59.606Z [error]: Authentication error: Invalid token
+2025-04-07T20:19:22.537Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:32:49.998Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:32:51.496Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:33:21.482Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:33:59.036Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:34:01.439Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:34:05.648Z [error]: Unhandled error: Expected double-quoted property name in JSON at position 296 (line 9 column 1)
+2025-04-07T20:34:14.200Z [error]: Unhandled error: Appointment validation failed: date: Appointment date must be in the future
+2025-04-07T20:34:23.033Z [error]: Unhandled error: Expected double-quoted property name in JSON at position 265 (line 9 column 1)
+2025-04-08T02:57:45.028Z [error]: JWT verification failed: jwt expired
+2025-04-08T02:57:45.029Z [error]: Authentication error: Invalid token
+2025-04-08T03:29:56.880Z [error]: JWT verification failed: jwt expired
+2025-04-08T03:29:56.881Z [error]: Authentication error: Invalid token
+2025-08-21T16:30:40.891Z [error]: Authentication error: Unauthorized access
