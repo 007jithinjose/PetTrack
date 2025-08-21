@@ -1,0 +1,91 @@
+services:
+  # MongoDB service
+  mongodb:
+    image: mongo:7.0
+    container_name: pet-track-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: pettrack
+    volumes:
+      - mongodb_data:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    ports:
+      - "27017:27017"
+    networks:
+      - pettrack-network
+    restart: unless-stopped
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh -u admin -p password --authenticationDatabase admin --quiet | grep 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  # Backend service (development)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pet-track-backend-dev
+    environment:
+      NODE_ENV: development
+      PORT: 5000
+      MONGODB_URI: mongodb://admin:password@mongodb:27017/pettrack?authSource=admin
+      JWT_SECRET: your-super-secret-jwt-key-change-in-production
+      JWT_EXPIRE: 7d
+      CORS_ORIGIN: http://localhost:5173,http://localhost:5174
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - ./backend/logs:/app/logs
+    depends_on:
+      - mongodb
+    networks:
+      - pettrack-network
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    command: >
+      sh -c "
+      echo 'Waiting for MongoDB to be ready...' &&
+      until nc -z mongodb 27017; do
+        sleep 1
+      done &&
+      echo 'MongoDB is ready. Running seed...' &&
+      npm run seed &&
+      echo 'Starting development server...' &&
+      npm run dev
+      "
+
+  # Frontend service (development)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: pet-track-frontend-dev
+    environment:
+      NODE_ENV: development
+      VITE_API_URL: http://localhost:3000
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - pettrack-network
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+# Volumes
+volumes:
+  mongodb_data:
+
+# Networks
+networks:
+  pettrack-network:
+    driver: bridge
