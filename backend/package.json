@@ -11,7 +11,9 @@
     "lint": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "migrate": "ts-node src/utils/migrations.ts",
-    "seed": "ts-node src/utils/seed.ts"
+    "seed": "ts-node src/utils/seed.ts",
+    "seed:hospitals": "ts-node src/utils/seed.ts hospitals",
+    "seed:dev": "ts-node src/utils/seedHospitals.ts"
   },
   "keywords": [],
   "author": "",

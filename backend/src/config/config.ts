@@ -1,5 +1,4 @@
 // File: src/config/config.ts
-// src/config/config.ts
 import dotenv from 'dotenv';
 import ms, { StringValue } from 'ms';
 
